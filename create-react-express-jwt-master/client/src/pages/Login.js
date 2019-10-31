@@ -11,7 +11,7 @@ class Login extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
 
-    this.Auth.login(this.state.email, this.state.password)
+    this.Auth.login(this.state.username, this.state.password)
       .then(res => {
         // once user is logged in
         // take them to their profile page
@@ -35,16 +35,16 @@ class Login extends Component {
     }
     return (
       <div className="container">
-        <h1>Login</h1>
+        <h1 className="logInHeader">Login</h1>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
-            <label htmlFor="email">Email address:</label>
+            <label htmlFor="username">Username:</label>
             <input className="form-control"
-                   placeholder="Email goes here..."
-                   name="email"
-                   type="email"
-                   id="email"
-                   autoComplete="email"
+                   placeholder="Username goes here..."
+                   name="username"
+                   type="text"
+                   id="username"
+                   autoComplete="username"
                    onChange={this.handleChange}/>
           </div>
           <div className="form-group">
@@ -57,9 +57,9 @@ class Login extends Component {
                    autoComplete="current-password"
                    onChange={this.handleChange}/>
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary logInSubmit">Submit</button>
         </form>
-        <p><Link to="/signup">Go to Signup</Link></p>
+        <p><Link to="/signup">Dont' have an account?</Link></p>
       </div>
 
     );

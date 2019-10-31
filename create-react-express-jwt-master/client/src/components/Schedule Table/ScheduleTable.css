@@ -1,0 +1,20 @@
+.eventSchedule {
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.eventScheduleHeader {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    background-color: rgb(61, 61, 61);
+    color: white;
+    font-weight: bold;
+  }
+  @media only screen and (min-width: 768px) {
+    .eventSchedule {
+      position: absolute;
+      top: 41px;
+      right: 25px;
+    }
+  }

@@ -1,0 +1,20 @@
+.carousel {
+    margin: 0 auto;
+    padding: 0;
+}
+.carouselPic {
+    margin: 0 auto;
+    height: 150px;
+    padding: 0;
+}
+.carouselInfo,.carouselInfoTable {
+    margin: 0 auto;
+    padding: 0;
+    height: 150px;
+}
+@media only screen and (min-width: 768px) {
+    .carousel {
+        margin: 0;
+        margin-left: 40px;
+    }
+}

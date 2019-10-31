@@ -35,7 +35,7 @@ class Signup extends Component {
     return (
       <div className="container">
 
-        <h1>Signup</h1>
+        <h1 className="signUpHeader">User sign up</h1>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">
             <label htmlFor="username">Username:</label>
@@ -67,9 +67,9 @@ class Signup extends Component {
                    autoComplete="new-password"
                    onChange={this.handleChange}/>
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className="btn btn-primary signUpSubmit">Submit</button>
         </form>
-        <p><Link to="/login">Go to Login</Link></p>
+        <p><Link to="/login">Already have an account?</Link></p>
       </div>
     );
   }

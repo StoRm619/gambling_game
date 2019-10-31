@@ -1,24 +1,72 @@
+.row {
+  margin: 0;
+}
+.signUpHeader,.logInHeader {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.signUpSubmit,.logInSubmit {
+  float: right;
+}
+.addMoneyPageHeader {
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 10px;
+  font-weight: bold;
+  border: 2px solid black;
+  margin-bottom: 15px;
+}
+.addMoneyForm {
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.addMoneySubmit {
+  float: right;
+}
 .App {
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
   color: white;
 }
-
-.App-intro {
-  font-size: large;
+.mainMatch {
+  margin: 0 auto;
+  padding: 0;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.mainTwitchPlayer {
+  margin-top: 15px;
+  height: 300px;
+}
+.mainMatchInfo {
+  width: 100%;
+}
+.carouselHeader {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 15px;
+  background-color: rgb(61, 61, 61);
+  color: white;
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  .mainMatch {
+    margin: 0;
+    margin-left: 40px;
+  }
+  .mainTwitchPlayer {
+    height: 350px;
+  }
+  .carouselHeader {
+    margin: 0;
+    margin-left: 40px;
+  }
 }
