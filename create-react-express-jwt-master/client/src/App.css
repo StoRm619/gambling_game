@@ -5,21 +5,25 @@
   padding: 0;
   margin-bottom: 0;
 }
+.addMoney {
+  color: white;
+}
 .signUpHeader,.logInHeader {
   margin: 0 auto;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 50px;
   margin-bottom: 15px;
+  color: white;
 }
 .signUpForm,.logInForm {
   margin: 0 auto;
   padding: 0;
 }
+.formLabel {
+  color: white;
+}
 .formLink {
   padding: 0;
-}
-.addMoney {
-  color: white;
 }
 .addMoneyPageHeader {
   margin: 0 auto;
@@ -55,7 +59,7 @@
   padding: 0;
 }
 .mainTwitchPlayer {
-  margin-top: 15px;
+  margin-top: 30px;
   height: 300px;
 }
 .mainMatchInfoRow {
@@ -63,6 +67,11 @@
 }
 .mainMatchInfo {
   width: 100%;
+}
+.mainMatchTable {
+  opacity: 0.9;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 .carouselRow {
   margin-top: 15px;
@@ -76,6 +85,8 @@
   background-color: rgb(61, 61, 61);
   color: white;
   font-weight: bold;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 @media only screen and (min-width: 768px) {
   .mainMatch {
