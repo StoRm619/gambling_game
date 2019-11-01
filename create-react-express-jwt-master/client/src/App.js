@@ -15,7 +15,7 @@ class App extends Component {
           <MainMatch />
         </div>
 
-        <div className="row">
+        <div className="row carouselRow">
           <div className="col-sm-10 col-md-6 carouselHeader">
             Other ongoing matches: 
           </div>

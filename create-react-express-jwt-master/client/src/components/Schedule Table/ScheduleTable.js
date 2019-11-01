@@ -4,7 +4,7 @@ import './ScheduleTable.css';
 function ScheduleTable() {
     return (<div className="col-sm-12 col-md-5 eventSchedule">
         <div className="eventScheduleHeader">Upcoming matches: </div>
-        <table class="table eventScheduleTable table-dark">
+        <table className="table eventScheduleTable table-dark">
             <thead>
                 <tr>
                     <th scope="col">Event</th>

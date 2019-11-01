@@ -7,21 +7,21 @@ function MainMatch() {
                 src="https://player.twitch.tv/?channel=summit1g&muted=true&autoplay=false"
                 height="100%"
                 width="100%"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen="true">
+                frameBorder="0"
+                title="mainTwitch"
+                scrolling="no">
             </iframe>
         </div>
 
         <div className="row">
             <div className="mainMatchInfo">
-                <table class="table table-dark">
+                <table className="table table-dark">
                     <tbody>
                         <tr>
                             <td>Event name</td>
                             <td>A x B</td>
                             <td>2 x 1</td>
-                            <td>Link</td>
+                            <td className="mainTableLink">Link</td>
                         </tr>
                     </tbody>
                 </table>
