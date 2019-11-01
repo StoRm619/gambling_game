@@ -49,7 +49,7 @@ class AddMoney extends Component {
                                         <input type="checkbox" className="form-check-input" id="addMoneyCheck" />
                                         <label className="form-check-label" htmlFor="addMoneyCheck">Confirm</label>
                                     </div>
-                                    <button type="submit" className="btn btn-dark addMoneySubmit">Submit</button>
+                                    <button type="submit" className="btn btn-primary addMoneySubmit">Submit</button>
                                 </div>
                             </div>
                         </div>

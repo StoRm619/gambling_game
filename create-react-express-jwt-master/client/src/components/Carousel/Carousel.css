@@ -1,6 +1,7 @@
 .carousel {
     margin: 0 auto;
     padding: 0;
+    opacity: 0.9;
 }
 .carouselPic {
     margin: 0 auto;
@@ -11,6 +12,7 @@
     margin: 0 auto;
     padding: 0;
     height: 175px;
+    border-bottom-right-radius: 25px;
 }
 @media only screen and (min-width: 768px) {
     .carousel {

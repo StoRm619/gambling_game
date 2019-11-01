@@ -33,14 +33,14 @@ class Signup extends Component {
       return <Redirect to="/" />
     }
     return (
-      <div className="container">
+      <div className="container signUpPage">
         <div className="row">
           <h1 className="signUpHeader">User sign up</h1>
         </div>
         <div className="row">
           <form onSubmit={this.handleFormSubmit} className="col-sm-10 col-md-6 signUpForm">
             <div className="form-group row">
-              <label htmlFor="username">Username:</label>
+              <label htmlFor="username" className="formLabel">Username:</label>
               <input className="form-control"
                 placeholder="Username goes here..."
                 name="username"
@@ -50,7 +50,7 @@ class Signup extends Component {
                 onChange={this.handleChange} />
             </div>
             <div className="form-group row">
-              <label htmlFor="email">Email address:</label>
+              <label htmlFor="email" className="formLabel">Email address:</label>
               <input className="form-control"
                 placeholder="Email goes here..."
                 name="email"
@@ -60,7 +60,7 @@ class Signup extends Component {
                 onChange={this.handleChange} />
             </div>
             <div className="form-group row">
-              <label htmlFor="pwd">Password:</label>
+              <label htmlFor="pwd" className="formLabel">Password:</label>
               <input className="form-control"
                 placeholder="Password goes here..."
                 name="password"

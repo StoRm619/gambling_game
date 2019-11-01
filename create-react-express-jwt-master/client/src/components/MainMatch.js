@@ -15,7 +15,7 @@ function MainMatch() {
 
         <div className="row">
             <div className="mainMatchInfo">
-                <table className="table table-dark">
+                <table className="table table-dark mainMatchTable">
                     <tbody>
                         <tr>
                             <td>Event name</td>
