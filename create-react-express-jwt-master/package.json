@@ -26,6 +26,9 @@
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.5.3",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "reactstrap": "^8.1.1"
   }
 }
