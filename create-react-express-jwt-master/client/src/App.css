@@ -1,29 +1,43 @@
 .row {
   margin: 0;
 }
+.table {
+  padding: 0;
+  margin-bottom: 0;
+}
 .signUpHeader,.logInHeader {
   margin: 0 auto;
   text-align: center;
   margin-top: 25px;
   margin-bottom: 15px;
 }
-.signUpSubmit,.logInSubmit {
-  float: right;
+.signUpForm,.logInForm {
+  margin: 0 auto;
+  padding: 0;
+}
+.formLink {
+  padding: 0;
+}
+.addMoney {
+  color: white;
 }
 .addMoneyPageHeader {
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 30px;
   padding: 10px;
   font-weight: bold;
-  border: 2px solid black;
+  border: 2px solid white;
   margin-bottom: 15px;
 }
 .addMoneyForm {
   margin: 0 auto;
   margin-top: 15px;
 }
-.addMoneySubmit {
-  float: right;
+.form-check, .addMoneySubmit {
+  margin-top: 15px;
+}
+.form-group {
+  margin-bottom: 5px;
 }
 .App {
   text-align: center;
@@ -44,8 +58,14 @@
   margin-top: 15px;
   height: 300px;
 }
+.mainMatchInfoRow {
+  margin-top: 15px;
+}
 .mainMatchInfo {
   width: 100%;
+}
+.carouselRow {
+  margin-top: 15px;
 }
 .carouselHeader {
   margin: 0 auto;
@@ -68,5 +88,17 @@
   .carouselHeader {
     margin: 0;
     margin-left: 40px;
+  }
+  .addMoneyPageHeader {
+    margin: 0;
+    margin-top: 15px;
+  }
+  .addMoneyForm {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+  }
+  .form-group {
+    padding: 0;
   }
 }
