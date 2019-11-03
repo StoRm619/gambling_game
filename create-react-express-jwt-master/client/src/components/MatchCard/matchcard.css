@@ -1,0 +1,16 @@
+.matchCard{
+    width: 100%;
+    background-color: #000000a2;
+    margin-top: 5px;
+}
+.card{
+    border-radius: 0;
+    background-color: #000000a2;
+    width: 100%;
+}
+.matchCardImg{
+    background-color: #000000a2;
+    height: 200px;
+    filter: blur(3px);
+
+}

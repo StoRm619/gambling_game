@@ -13,7 +13,7 @@ import Profile from './pages/Profile';
 import AddMoney from './pages/AddMoney'
 import Signup from './pages/Signup';
 import MatchesBoard from './pages/Matches';
-// import MatchDash from './components/Matchboard';
+import MatchDash from './pages/Matchboard';
 import Navbar from './components/Navbar';
 
 
@@ -25,14 +25,15 @@ if(localStorage.getItem("id_token")) {
 
 ReactDOM.render(
     <Router>
-        <div>
-            <Navbar />
+    <div>
+    <Navbar />
             <Route exact path="/" component={App} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/addMoney" component={AddMoney} />
             <Route exact path="/matchesBoard" component={MatchesBoard} />
+            <Route exact path="/matchDash" component={MatchDash} />
 
 
         </div>
