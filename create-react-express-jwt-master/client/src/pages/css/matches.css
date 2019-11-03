@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'bigNoodle';
+  src: url(../../utils/Bignoodletitling-8ojz.ttf);
+}
+.display-3{
+  font-family: 'bigNoodle';
+
+}
+.jumbotron{
+    background: #141414b2;
+}
+.textBack{
+    background: #141414d5;
+    width: 50%;
+    margin-left: 0;
+    
+}

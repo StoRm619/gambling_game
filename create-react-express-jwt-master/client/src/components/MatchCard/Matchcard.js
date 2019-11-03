@@ -12,11 +12,13 @@ function Matchcard (props){
                 <Card inverse>
                     <CardImg className="matchCardImg" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSfE6r5zseRCvX1JfxBBB4napxlw7ii74F6xlR61uaHbkRR9BI0" alt={props.name} />
                     <CardImgOverlay>
+                    <div className="textBack">
                         <CardTitle>Origin Tournament</CardTitle>
                         <CardText>{props.eventName}</CardText>
                         <CardText>
                             <small className="scheduledText">Scheduled at: {props.scheduledAt}</small>
                         </CardText>
+                        </div>
                     </CardImgOverlay>
                 </Card>
             </div>
