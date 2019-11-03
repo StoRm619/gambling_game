@@ -17,10 +17,11 @@ class MatchesBoard extends Component {
                 <Jumbotron fluid>
                     <Container fluid>
                     <h1 className="display-3">Scheduled Matches</h1>
-                    <p className="lead">This is where all of the matches are going to show up, bet on or not.</p>
+                    <p className="lead"><strong>This is where all of the matches are going to show up, bet on or not.</strong></p>
                     </Container>
                 </Jumbotron>
             </div>
+            <div className="matchesBox">
                 {this.state.matches.map(match => (
                 <MatchCard
                         key={match.id}
@@ -29,6 +30,7 @@ class MatchesBoard extends Component {
                         />
 
                 ))}
+                </div>
             </div>
         )
 

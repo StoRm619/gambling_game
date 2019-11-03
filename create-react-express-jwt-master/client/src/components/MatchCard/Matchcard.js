@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import AuthService from '../AuthService';
 import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
-import '../../utils/HACKED.ttf';
 import './matchcard.css';
 
 function Matchcard (props){
@@ -10,16 +9,20 @@ function Matchcard (props){
         return (
             <div className="matchCard">
                 <Card inverse>
-                    <CardImg className="matchCardImg" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSfE6r5zseRCvX1JfxBBB4napxlw7ii74F6xlR61uaHbkRR9BI0" alt={props.name} />
-                    <CardImgOverlay>
+                    <CardImg id="matchCardImg" width="100%" src="https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f" alt={props.name} />
+                    <CardImgOverlay clasName="position">
                     <div className="textBack">
-                        <CardTitle>Origin Tournament</CardTitle>
-                        <CardText>{props.eventName}</CardText>
-                        <CardText>
-                            <small className="scheduledText">Scheduled at: {props.scheduledAt}</small>
+                        <CardTitle className="cardTitle">Origin Tournament</CardTitle>
+                        <CardText>{props.eventName}
+                        <br/>
+
+                            <small className="scheduledText">Scheduled at: <br/> {props.scheduledAt}</small>
                         </CardText>
                         </div>
-                    </CardImgOverlay>
+                        <img className="teamALogo" src="https://cdn.pandascore.co/images/team/image/126443/10206.png" alt="unkown"/>
+                        <img className="teamBLogo" src="http://www.strangehistory.net/blog/wp-content/uploads/2015/08/question-mark-xxl.png" alt="unkown"/>
+
+                        </CardImgOverlay>
                 </Card>
             </div>
         )

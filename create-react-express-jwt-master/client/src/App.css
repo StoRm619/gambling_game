@@ -1,12 +1,18 @@
+@font-face {
+  font-family: 'nordic';
+  src: url(./utils/NordicaAdvancedRegular.otf);
+}
 body{
   background-color: black;
   color: #ebebeb;
+  font-family: 'nordic';
+
 }
 .row {
   margin: 0;
 }
 .matches {
-      background-image: url("http://karaokefromhell.com/wp-content/uploads/2014/10/black-background-metal-texture-wallpaper-1280x960.jpg");
+      background-image: url(".//utils/simpleTexture.jpg");
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -90,8 +96,6 @@ body{
 }
 .mainMatchTable {
   opacity: 0.9;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
 }
 .carouselRow {
   margin-top: 15px;
@@ -105,10 +109,15 @@ body{
   background-color: rgb(51, 51, 51);
   color: white;
   font-weight: bold;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 595px) {
+  .matchesBox{
+    width: 100%;
+  }
+  .matchCard{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .mainMatch {
     margin: 0;
     margin-left: 40px;
@@ -131,5 +140,23 @@ body{
   }
   .form-group {
     padding: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .matchesBox{
+    width: 55%;
+  }
+.matchCard{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .matchesBox{
+    width: 45%;
+  }
+.matchCard{
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }

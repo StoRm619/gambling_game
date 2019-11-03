@@ -2,16 +2,63 @@
   font-family: 'bigNoodle';
   src: url(../../utils/Bignoodletitling-8ojz.ttf);
 }
+@font-face {
+  font-family: 'nordic';
+  src: url(../../utils/NordicaAdvancedRegular.otf);
+}
+@font-face {
+  font-family: 'nordicBig';
+  src: url(../../utils/NordicaAdvancedRegularExtended.otf);
+}
+
 .display-3{
   font-family: 'bigNoodle';
+  text-shadow: 3px 2px #141414b2;
+}
+.lead{
+    text-shadow: 1px 1px #141414b2;
+    font-family: 'nordic';
 
 }
 .jumbotron{
     background: #141414b2;
+    background-image: url("https://www.gamersrdy.com/wp-content/uploads/2019/05/bg-top-2v2-rl-1024x576.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;   
+    box-shadow: 0 0 8px 0px #141414d5;
+
+
+}
+.matchesBox{
+  background: #38353556;
+  padding: 5px;
+  padding-top: 20px;
 }
 .textBack{
-    background: #141414d5;
-    width: 50%;
-    margin-left: 0;
-    
+    width: 40%;
+    margin: auto;
+}
+.position {
+position: relatve;
+}
+.cardTitle{
+    margin-bottom: 0px;
+    font-size: 1.2em;
+}
+.teamALogo{
+position: absolute;
+right: 5px;
+top: 30px;
+height: 120px;
+width: 120px;
+}
+.teamBLogo{
+position: absolute;
+left: 5px;
+top: 30px;
+height: 120px;
+width: 120px;
+
 }
