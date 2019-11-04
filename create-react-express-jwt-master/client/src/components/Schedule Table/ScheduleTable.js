@@ -11,7 +11,6 @@ function ScheduleTable() {
                     <th scope="col">Teams</th>
                     <th scope="col">Odds</th>
                     <th scope="col">Time</th>
-
                 </tr>
             </thead>
             <tbody>

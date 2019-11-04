@@ -46,6 +46,14 @@ app.post('/api/signup', (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
+app.put('/api/update', (req, res) => {
+  console.log('Hit put route');
+  console.log(req.body)
+  db.User.update({username: req.body.username},{$set: {chronos: req.body.chronos}})
+  .then(data => res.json(data))
+  .catch(err => res.status(400).json(err));
+}) 
+
 // Any route with isAuthenticated is protected and you need a valid token
 // to access
 app.get('/api/user/:id', isAuthenticated, (req, res) => {
