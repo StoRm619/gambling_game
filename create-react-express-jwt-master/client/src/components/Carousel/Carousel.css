@@ -8,6 +8,9 @@
     height: 175px;
     padding: 0;
 }
+.carouselIframe {
+    border-bottom-left-radius: 25px;
+}
 .carouselInfo,.carouselInfoTable {
     margin: 0 auto;
     padding: 0;

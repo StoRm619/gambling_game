@@ -14,7 +14,8 @@ function Carousel() {
                                 width="100%"
                                 frameBorder="0"
                                 title="carousel1"
-                                scrolling="no">
+                                scrolling="no"
+                                className="carouselIframe">
                             </iframe>
                         </div>
                         <div className="col-sm-6 carouselInfo">

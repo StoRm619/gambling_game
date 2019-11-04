@@ -5,9 +5,25 @@
   padding: 0;
   margin-bottom: 0;
 }
-.addMoney {
+body {
+  min-height: 750px;
+  background-image: url("./circuit_crowd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.App {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
   color: white;
 }
+/* Sign up and log in pages */
 .signUpHeader,.logInHeader {
   margin: 0 auto;
   text-align: center;
@@ -24,6 +40,10 @@
 }
 .formLink {
   padding: 0;
+}
+/* Add money page */
+.addMoney {
+  color: white;
 }
 .addMoneyPageHeader {
   margin: 0 auto;
@@ -43,17 +63,7 @@
 .form-group {
   margin-bottom: 5px;
 }
-.App {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+/* Home page - main event */
 .mainMatch {
   margin: 0 auto;
   padding: 0;
@@ -61,6 +71,10 @@
 .mainTwitchPlayer {
   margin-top: 30px;
   height: 300px;
+}
+.mainIframe {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 .mainMatchInfoRow {
   margin-top: 15px;
@@ -73,8 +87,9 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
+/* Home page - carousel */
 .carouselRow {
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .carouselHeader {
   margin: 0 auto;
@@ -82,11 +97,35 @@
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 15px;
-  background-color: rgb(61, 61, 61);
-  color: white;
+  background-color: rgb(211, 144, 20);
+  color: black;
   font-weight: bold;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+}
+/* Profile page */
+.profilePage {
+  color: white;
+  margin: 0 auto;
+  padding: 0;
+}
+.profileHeader {
+  margin-top: 25px;
+  text-align: center;
+}
+.profileTableHeader {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.profileUsernameDisplay,.profileBalanceDisplay {
+  font-weight: bold;
+}
+.profileBalanceDisplay {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.profileTable {
+  opacity: 0.9;
 }
 @media only screen and (min-width: 768px) {
   .mainMatch {
