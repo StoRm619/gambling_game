@@ -25,6 +25,10 @@ const UserSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
+  },
+  chronos: {
+    type: Number,
+    default: 100
   }
 });
 
