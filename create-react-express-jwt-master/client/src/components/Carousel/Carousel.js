@@ -1,7 +1,9 @@
 import React from 'react';
 import './Carousel.css';
 
+
 function Carousel() {
+    
     return (
         <div className="carousel slide col-sm-10 col-md-6" data-ride="carousel" data-interval="8000">
             <div className="carousel-inner">

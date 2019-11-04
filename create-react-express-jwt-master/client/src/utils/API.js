@@ -7,5 +7,8 @@ export default {
   // sign up a user to our service
   signUpUser: (username, email, password) => {
     return axios.post('api/signup', {username: username, email: email, password: password});
+  },
+  livedata: () =>{
+    return axios.get("https://api.pandascore.co/matches?token=71QvB9vCC3xE099n8yoHlFK06KsAs3XbIJQy_QN0C9PK--yqOQg")
   }
 };
