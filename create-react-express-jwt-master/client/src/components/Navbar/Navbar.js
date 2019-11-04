@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import AuthService from '../AuthService';
+import './navbar.css';
 
 class Navbar extends Component {
     constructor() {
@@ -17,6 +18,12 @@ class Navbar extends Component {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link active" to="/addMoney">Add Money</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link active" to="/matchesBoard">Current Matches</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link active" to="/matchDash">Match DashBoard</Link>
                     </li>
                     <li className="nav-item">
                         {/* this is not using the Link component to logout or user and then refresh the application to the start */}
@@ -41,8 +48,8 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="container">
+            <nav className="navbar navbar-expand-lg navbar-dark" id="navColor">
+                <div className="container" id="nav-container">
                     <Link className="navbar-brand" to="/">Gambling Game</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

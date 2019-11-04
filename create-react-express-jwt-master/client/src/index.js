@@ -12,7 +12,10 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import AddMoney from './pages/AddMoney'
 import Signup from './pages/Signup';
+import MatchesBoard from './pages/Matches';
+import MatchDash from './pages/Matchboard';
 import Navbar from './components/Navbar';
+
 
 // Here is if we have an id_token in localStorage
 if(localStorage.getItem("id_token")) {
@@ -22,13 +25,17 @@ if(localStorage.getItem("id_token")) {
 
 ReactDOM.render(
     <Router>
-        <div>
-            <Navbar />
+    <div>
+    <Navbar />
             <Route exact path="/" component={App} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/addMoney" component={AddMoney} />
+            <Route exact path="/matchesBoard" component={MatchesBoard} />
+            <Route exact path="/matchDash" component={MatchDash} />
+
+
         </div>
     </Router>
     , document.getElementById('root')

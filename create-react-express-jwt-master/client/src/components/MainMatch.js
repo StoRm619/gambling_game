@@ -25,7 +25,8 @@ class MainMatch extends Component{
                 width="100%"
                 frameBorder="0"
                 title="mainTwitch"
-                scrolling="no">
+                scrolling="no"
+                className="mainIframe">
             </iframe>
         </div>
 
