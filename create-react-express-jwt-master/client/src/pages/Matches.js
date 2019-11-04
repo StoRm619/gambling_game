@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import withAuth from './../components/withAuth';
 import MatchCard from '../components/MatchCard/Matchcard';
+import Wrapper from '../components/Wrapper'
 import matches from '../matches.json';
 import { Jumbotron, Container } from 'reactstrap';
 import './css/matches.css';
@@ -22,6 +23,7 @@ class MatchesBoard extends Component {
                 </Jumbotron>
             </div>
             <div className="matchesBox">
+            <Wrapper>
                 {this.state.matches.map(match => (
                 <MatchCard
                         key={match.id}
@@ -30,6 +32,7 @@ class MatchesBoard extends Component {
                         />
 
                 ))}
+                </Wrapper>
                 </div>
             </div>
         )

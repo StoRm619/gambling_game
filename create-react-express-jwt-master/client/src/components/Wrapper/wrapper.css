@@ -1,7 +1,13 @@
 .wrapper {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: wrap;
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper{
+    display: block;
+  }
 }
