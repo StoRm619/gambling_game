@@ -1,0 +1,20 @@
+.matchCard{
+    background-color: #bebabaa2;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card{
+    text-align: center;
+    border-radius: 0;
+    background: none;
+    width: 100%;
+    border-color: #000000;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#matchCardImg{
+    height: 200px;
+    background-color: #bebabaa2;
+    opacity: .9;
+
+}

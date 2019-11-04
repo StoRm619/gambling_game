@@ -11,18 +11,16 @@
     background-color: rgb(211, 144, 20);
     color: black;
     font-weight: bold;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+
   }
   .eventScheduleTable {
     opacity: 0.8;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+
   }
   @media only screen and (min-width: 768px) {
     .eventSchedule {
       position: absolute;
-      top: 41px;
+      top: 55px;
       right: 25px;
     }
   }
