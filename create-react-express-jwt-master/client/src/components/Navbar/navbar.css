@@ -8,7 +8,7 @@
   src: url(../../utils/Bignoodletitling-8ojz.ttf);
 }
 #navColor{
-    background-color: rgb(27, 27, 27);
+    background: none;
     padding: 0;
 }
 .navbar-brand{

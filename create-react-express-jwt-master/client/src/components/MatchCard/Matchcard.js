@@ -9,6 +9,7 @@ function Matchcard (props){
         return (
             <div className="matchCard">
                 <Card inverse>
+                    <Link className="nav-link active" to="/matchDash">
                     <CardImg id="matchCardImg" width="100%" src="https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f" alt={props.name} />
                     <CardImgOverlay className="position">
                     <div className="textBack">
@@ -23,6 +24,7 @@ function Matchcard (props){
                         <img className="teamBLogo" src="http://www.strangehistory.net/blog/wp-content/uploads/2015/08/question-mark-xxl.png" alt="unkown"/>
 
                         </CardImgOverlay>
+                    </Link>
                 </Card>
             </div>
         )

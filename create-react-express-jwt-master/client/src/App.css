@@ -6,22 +6,19 @@ body{
   background-color: black;
   color: #ebebeb;
   font-family: 'nordic';
-
-}
-.row {
-  margin: 0;
-}
-.matchDash{
-  width: 100%;
-  height: 100%;
   background-image: url("./utils/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
+.row {
+  margin: 0;
+}
+
 .matches {
-      background-image: url(".//utils/simpleTexture.jpg");
+      background-image: url("./utils/simpleTexture.jpg");
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -40,13 +37,7 @@ body{
   padding: 0;
   margin-bottom: 0;
 }
-body {
-  min-height: 750px;
-  background-image: url("./circuit_crowd.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .App {
   text-align: center;
   padding: 0;
@@ -106,16 +97,17 @@ body {
 .mainTwitchPlayer {
   margin-top: 30px;
   height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
-.mainIframe {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
+
 .mainMatchInfoRow {
   margin-top: 15px;
 }
 .mainMatchInfo {
   width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 .mainMatchTable {
   opacity: 0.9;
@@ -123,6 +115,8 @@ body {
 /* Home page - carousel */
 .carouselRow {
   margin-top: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 .carouselHeader {
   margin: 0 auto;
