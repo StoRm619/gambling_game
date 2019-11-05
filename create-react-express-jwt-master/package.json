@@ -30,6 +30,7 @@
     "morgan": "^1.9.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "reactstrap": "^8.1.1"
+    "reactstrap": "^8.1.1",
+    "socket.io": "^2.3.0"
   }
 }

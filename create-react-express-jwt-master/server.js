@@ -5,6 +5,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const morgan = require('morgan'); // used to see requests
 const db = require('./models');
+var http = require('http').createServer(app);
+var io = require('socket.io')(http);
 const PORT = process.env.PORT || 3001;
 
 const isAuthenticated = require("./config/isAuthenticated");
@@ -87,6 +89,18 @@ app.use(function (err, req, res, next) {
 // Define any API routes before this runs
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+io.on('connection', function(socket){
+  console.log('a user connected');
+  socket.on('chat message', function(msg){
+      console.log('message: ' + JSON.stringify(msg));
+      io.emit('chat message', msg)
+    });
+});
+
+http.listen(3001, function(){
+console.log('listening on *:3001');
 });
 
 app.listen(PORT, function() {
