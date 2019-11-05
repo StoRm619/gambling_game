@@ -8,7 +8,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Chip from "@material-ui/core/Chip";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import { CTX } from "./Store";
+import { CTX } from "../Store/Store.js";
 
 const useStyles = makeStyles(theme => ({
   root: {

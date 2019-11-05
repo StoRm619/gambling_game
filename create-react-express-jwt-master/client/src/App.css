@@ -6,7 +6,6 @@ body{
   background-color: black;
   color: #ebebeb;
   font-family: 'nordic';
-
 }
 .row {
   margin: 0;
@@ -29,7 +28,7 @@ body{
 
     }
 .App {
-      background-image: url("./utils/circuit_crowd.jpg");
+      background-image: url("./utils/simpleTexture.jpg");
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -41,8 +40,7 @@ body{
   margin-bottom: 0;
 }
 body {
-  min-height: 750px;
-  background-image: url("./circuit_crowd.jpg");
+  background-image: url("./utils/simpleTexture.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -105,20 +103,43 @@ body {
 }
 .mainTwitchPlayer {
   margin-top: 30px;
-  height: 300px;
+  height: 350px;
 }
-.mainIframe {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+.mainGameInfo {
+  padding-bottom: 10px;
+  background-image: url("https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.mainMatchInfoRow {
+.teamInfo {
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.teamLogo {
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 7px;
+  width: 70px;
+  height: 85px;
+}
+.teamName {
+  margin: 0 auto;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #ebebeb;
+}
+.teamMiddle {
+  padding: 0;
+  margin: 0 auto;
   margin-top: 15px;
+  font-weight: bold;
+  color: #ebebeb;
 }
-.mainMatchInfo {
-  width: 100%;
-}
-.mainMatchTable {
-  opacity: 0.9;
+.mainGameBet {
+  margin-top: 10px;
 }
 /* Home page - carousel */
 .carouselRow {
