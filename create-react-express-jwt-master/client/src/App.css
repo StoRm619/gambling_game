@@ -6,6 +6,13 @@ body{
   background-color: black;
   color: #ebebeb;
   font-family: 'nordic';
+}
+.row {
+  margin: 0;
+}
+.matchDash{
+  width: 100%;
+  height: 100%;
   background-image: url("./utils/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -26,7 +33,7 @@ body{
 
     }
 .App {
-      background-image: url("./utils/circuit_crowd.jpg");
+      background-image: url("./utils/simpleTexture.jpg");
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -37,7 +44,16 @@ body{
   padding: 0;
   margin-bottom: 0;
 }
+<<<<<<< HEAD
 
+=======
+body {
+  background-image: url("./utils/simpleTexture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+>>>>>>> ea2a14b1c90313af4c93a1147e730ed0e919286f
 .App {
   text-align: center;
   padding: 0;
@@ -96,6 +112,7 @@ body{
 }
 .mainTwitchPlayer {
   margin-top: 30px;
+<<<<<<< HEAD
   height: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -108,9 +125,45 @@ body{
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+=======
+  height: 350px;
 }
-.mainMatchTable {
-  opacity: 0.9;
+.mainGameInfo {
+  padding-bottom: 10px;
+  background-image: url("https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.teamInfo {
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+.teamLogo {
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 7px;
+  width: 70px;
+  height: 85px;
+>>>>>>> ea2a14b1c90313af4c93a1147e730ed0e919286f
+}
+.teamName {
+  margin: 0 auto;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #ebebeb;
+}
+.teamMiddle {
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ebebeb;
+}
+.mainGameBet {
+  margin-top: 10px;
 }
 /* Home page - carousel */
 .carouselRow {

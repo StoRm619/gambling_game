@@ -46,3 +46,4 @@ class MatchesBoard extends Component {
 }
 
 export default withAuth(MatchesBoard);
+

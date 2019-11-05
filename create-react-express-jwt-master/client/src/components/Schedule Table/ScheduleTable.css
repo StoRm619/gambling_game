@@ -14,8 +14,7 @@
 
   }
   .eventScheduleTable {
-    opacity: 0.8;
-
+    background-color: rgb(3, 3, 36);
   }
   @media only screen and (min-width: 768px) {
     .eventSchedule {
