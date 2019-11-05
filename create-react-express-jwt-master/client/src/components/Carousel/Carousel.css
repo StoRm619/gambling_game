@@ -1,20 +1,17 @@
 .carousel {
     margin: 0 auto;
     padding: 0;
-    opacity: 0.9;
 }
 .carouselPic {
     margin: 0 auto;
     height: 175px;
     padding: 0;
 }
-.carouselIframe {
-    border-bottom-left-radius: 25px;
-}
 .carouselInfo,.carouselInfoTable {
     margin: 0 auto;
     padding: 0;
     height: 175px;
+    background-color: rgb(3, 3, 36);
 }
 @media only screen and (min-width: 768px) {
     .carousel {
