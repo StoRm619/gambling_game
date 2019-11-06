@@ -25,7 +25,7 @@ class MatchDash extends Component {
 
     componentDidMount() {
         API.getAllUsers().then(res => {
-            console.log(res.data)
+            //console.log(res.data)
             for (let i = 0; i < res.data.length; i++) {
                 this.setState({
                     poolA: this.state.poolA + res.data[i].userBetA,
@@ -68,19 +68,33 @@ class MatchDash extends Component {
     }
 
     handleFormSubmit = event => {
+        console.log(document.querySelector('input[name="chooseTeam"]:checked').value)
         // Preventing the default behavior of the form submit (which is to refresh the page)
         event.preventDefault();
+        if (document.querySelector('input[name="chooseTeam"]:checked').value === 'TeamA') {
+            this.setState({
+                chronos: this.state.chronos - parseInt(this.state.inputValue),
+                userBetA: this.state.userBetA + parseInt(this.state.inputValue),
+                poolA: this.state.poolA + parseInt(this.state.inputValue),
+                poolTotal: this.state.poolTotal + parseInt(this.state.inputValue),
+            });
 
-        this.setState({
-            chronos: this.state.chronos - parseInt(this.state.inputValue),
-            userBetA: this.state.userBetA + parseInt(this.state.inputValue),
-            poolA: this.state.poolA + parseInt(this.state.inputValue),
-            poolTotal: this.state.poolTotal + parseInt(this.state.inputValue),
-        });
+            API.getUser(this.props.user.id).then(res => {
+                API.updateUser(this.state.username, this.state.chronos, this.state.userBetA)
+            });
+        } else if (document.querySelector('input[name="chooseTeam"]:checked').value === 'TeamB' ) {
+            this.setState({
+                chronos: this.state.chronos - parseInt(this.state.inputValue),
+                userBetB: this.state.userBetB + parseInt(this.state.inputValue),
+                poolB: this.state.poolB + parseInt(this.state.inputValue),
+                poolTotal: this.state.poolTotal + parseInt(this.state.inputValue),
+            });
 
-        API.getUser(this.props.user.id).then(res => {
-            API.updateUser(this.state.username, this.state.chronos, this.state.userBetA)
-        });
+            API.getUser(this.props.user.id).then(res => {
+                API.updateUserB(this.state.username, this.state.chronos, this.state.userBetB)
+            });
+        }
+
     };
 
     render() {
@@ -98,13 +112,14 @@ class MatchDash extends Component {
                 <div className="dashboardPosition">
                     <div className="chosenTeamDetails">
                     </div>
-                    <ChosenStream />
+                    {/* <ChosenStream /> */}
                     <div className="chat">
                         <Store>
                             <Dashboard />
                         </Store>
                     </div>
                 </div>
+
                 <div className="betBoard">
                     <div className="">
                         {`Time: ${this.state.curTime}`}
@@ -128,6 +143,11 @@ class MatchDash extends Component {
                         {`Chronos balance: ${this.state.chronos}`}
                     </div>
                     <form onSubmit={this.handleFormSubmit} className="addMoneyForm col-sm-11 col-md-5">
+                        <label>TeamA</label>
+                        <input type="radio" name="chooseTeam" value="TeamA" />
+                        <br />
+                        <label>TeamB</label>
+                        <input type="radio" name="chooseTeam" value="TeamB" />
                         <div className="form-group row col-sm-12">
                             <label htmlFor="depositedMoney">Place your bet </label>
                             <input type="text" value={this.state.value} className="form-control" id="betMoney" placeholder="Amount to bet" onChange={this.handleInputChange} />
@@ -135,7 +155,7 @@ class MatchDash extends Component {
                         <div className="form-group row">
                             <div className="col-sm-12">
                                 <div className="row">
-                                    <button type="submit" className="btn btn-primary placeBetMoney">Bet A</button>
+                                    <button type="submit" className="btn btn-primary placeBetMoney">Bet</button>
                                 </div>
                             </div>
                         </div>

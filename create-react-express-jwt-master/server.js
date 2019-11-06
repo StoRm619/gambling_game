@@ -60,6 +60,12 @@ app.put('/api/update', (req, res) => {
     .catch(err => res.status(400).json(err));
 })
 
+app.put('/api/updateB', (req, res) => {
+  db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, userBetB: req.body.userBetB } })
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json(err));
+})
+
 // Any route with isAuthenticated is protected and you need a valid token
 // to access
 app.get('/api/user/:id', isAuthenticated, (req, res) => {

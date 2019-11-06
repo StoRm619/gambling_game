@@ -14,6 +14,9 @@ export default {
   updateUser: (username, chronos, userBetA) => {
     return axios.put('/api/update', { username: username, chronos: chronos, userBetA: userBetA })
   },
+  updateUserB: (username, chronos, userBetB) => {
+    return axios.put('/api/updateB', { username: username, chronos: chronos, userBetB: userBetB })
+  },
   getAllUsers: () => {
     return axios.get('/api/allUsers')
   },
