@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
-import AuthService from '../AuthService';
 import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
 import './matchcard.css';
 
@@ -9,6 +8,7 @@ function Matchcard (props){
         return (
             <div className="matchCard">
                 <Card inverse>
+                    <Link className="active" to="/matchDash">
                     <CardImg id="matchCardImg" width="100%" src="https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f" alt={props.name} />
                     <CardImgOverlay className="position">
                     <div className="textBack">
@@ -23,6 +23,7 @@ function Matchcard (props){
                         <img className="teamBLogo" src="http://www.strangehistory.net/blog/wp-content/uploads/2015/08/question-mark-xxl.png" alt="unkown"/>
 
                         </CardImgOverlay>
+                    </Link>
                 </Card>
             </div>
         )

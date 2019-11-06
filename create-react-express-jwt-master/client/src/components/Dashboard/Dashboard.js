@@ -46,8 +46,8 @@ export default function Dashboard() {
 
   return (
     <div>
-      <Paper className={classes.root}>
-        {/* <Typography variant="h4" component="h3">
+      <Paper id="paperStyle" className={classes.root}>
+        <Typography variant="h4" component="h3">
           Chat app.
         </Typography>
         <Typography component="h5">{activeTopic}</Typography> */}
