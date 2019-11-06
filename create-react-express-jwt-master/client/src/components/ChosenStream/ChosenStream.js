@@ -1,5 +1,7 @@
 import React from "react";
 import './chosenStream.css';
+import StreamDetails from './StreamDetails.js';
+
 
 function ChosenStream() {
     return (
@@ -10,11 +12,11 @@ function ChosenStream() {
                 width="100%"
                 frameBorder="0"
                 title="mainTwitch"
-                scrolling="no">
+                scrolling="no"
+                >
             </iframe>
             <div className="streamDetails">
-
-            
+            <StreamDetails />
             </div>
         </div>
     )

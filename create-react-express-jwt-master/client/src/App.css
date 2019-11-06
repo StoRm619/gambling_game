@@ -44,16 +44,6 @@ body{
   padding: 0;
   margin-bottom: 0;
 }
-<<<<<<< HEAD
-
-=======
-body {
-  background-image: url("./utils/simpleTexture.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
->>>>>>> ea2a14b1c90313af4c93a1147e730ed0e919286f
 .App {
   text-align: center;
   padding: 0;
@@ -112,7 +102,6 @@ body {
 }
 .mainTwitchPlayer {
   margin-top: 30px;
-<<<<<<< HEAD
   height: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -125,7 +114,6 @@ body {
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-=======
   height: 350px;
 }
 .mainGameInfo {
@@ -136,6 +124,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .teamInfo {
   padding: 0;
   margin: 0 auto;
@@ -147,7 +136,6 @@ body {
   margin-top: 7px;
   width: 70px;
   height: 85px;
->>>>>>> ea2a14b1c90313af4c93a1147e730ed0e919286f
 }
 .teamName {
   margin: 0 auto;

@@ -1,29 +1,24 @@
 .matchDash{
     position: relative;
 }
-.chat{
-    height: 700px;
-    background-color: #363333;
-}
-
 @media only screen and (min-width: 595px) {
 .chat{
-    width: 45%;
+    width: 95%;
 }
 }
 
 @media only screen and (min-width: 760px) {
 .chat{
-    width: 45%;
+    width: 95%;
     }
     
 }
 @media only screen and (min-width: 1022px) {
 .chat{
     position: absolute;
-    width: 45%;
-    right: 80px;
-    top: 0;
+    width: 50%;
+    right: 10px;
+    top: -50px;
 }
 }
 @media only screen and (min-width: 1200px) {
