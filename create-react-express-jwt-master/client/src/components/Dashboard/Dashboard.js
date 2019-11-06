@@ -26,14 +26,16 @@ const useStyles = makeStyles(theme => ({
   },
   chatWindow: {
     width: "70%",
-  },
-  chatBox: {
-    width: "85%"
-  },
-  button: {
-    width: "15%"
+    chatBox: {
+      width: "85%"
+    },
+    button: {
+      width: "15%"
+    }
   }
-}));
+})
+);
+
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -51,7 +53,7 @@ export default function Dashboard() {
         <Typography variant="h4" component="h3">
           Chat app.
         </Typography>
-        <Typography component="h5">{activeTopic}</Typography> */}
+        <Typography component="h5">{activeTopic}</Typography> 
         <div className={classes.flex}>
           {/* <div className={classes.topicsWindow}>
             <List>
