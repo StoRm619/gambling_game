@@ -29,6 +29,14 @@ const UserSchema = new Schema({
   chronos: {
     type: Number,
     default: 100
+  },
+  userBetA: {
+    type: Number,
+    default: 0
+  },
+  userBetB: {
+    type: Number,
+    default: 0
   }
 });
 

@@ -7,7 +7,7 @@ const morgan = require('morgan'); // used to see requests
 const db = require('./models');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 
 const isAuthenticated = require("./config/isAuthenticated");
 const auth = require("./config/auth");
@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/appDB', {useNewUrlParser: true, useCreateIndex: true})
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/appDB', { useNewUrlParser: true, useCreateIndex: true })
   .then(() => console.log("MongoDB Connected!"))
   .catch(err => console.error(err));
 
@@ -48,20 +48,26 @@ app.post('/api/signup', (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
+app.get('/api/allUsers', (req, res) => {
+  db.User.find({})
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json(err));
+})
+
 app.put('/api/update', (req, res) => {
-  db.User.update({username: req.body.username},{$set: {chronos: req.body.chronos}})
-  .then(data => res.json(data))
-  .catch(err => res.status(400).json(err));
-}) 
+  db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, userBetA: req.body.userBetA } })
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json(err));
+})
 
 // Any route with isAuthenticated is protected and you need a valid token
 // to access
 app.get('/api/user/:id', isAuthenticated, (req, res) => {
   db.User.findById(req.params.id).then(data => {
-    if(data) {
+    if (data) {
       res.json(data);
     } else {
-      res.status(404).send({success: false, message: 'No user found'});
+      res.status(404).send({ success: false, message: 'No user found' });
     }
   }).catch(err => res.status(400).send(err));
 });
@@ -87,22 +93,19 @@ app.use(function (err, req, res, next) {
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-io.on('connection', function(socket){
+io.on('connection', function (socket) {
   console.log('a user connected');
-  socket.on('chat message', function(msg){
-      console.log('message: ' + JSON.stringify(msg));
-      io.emit('chat message', msg)
-    });
+  socket.on('chat message', function (msg) {
+    console.log('message: ' + JSON.stringify(msg));
+    io.emit('chat message', msg)
+  });
 });
 
-http.listen(3001, function(){
-console.log(`🌎 ==> Server now on port ${PORT}!`);
+http.listen(PORT, function () {
+  console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
 
-// app.listen(PORT, function() {
-//   console.log(`🌎 ==> Server now on port ${PORT}!`);
-// });
