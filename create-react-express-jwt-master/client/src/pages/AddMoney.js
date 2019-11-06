@@ -39,7 +39,6 @@ class AddMoney extends Component {
 
         //db.users.update({username: "jasontest"},{$set: {chronos: 110}})
         API.getUser(this.props.user.id).then(res => {
-            console.log("1")
             API.updateUser(this.state.username, this.state.chronos)
         });
     };

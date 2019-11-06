@@ -49,8 +49,6 @@ app.post('/api/signup', (req, res) => {
 });
 
 app.put('/api/update', (req, res) => {
-  console.log('Hit put route');
-  console.log(req.body)
   db.User.update({username: req.body.username},{$set: {chronos: req.body.chronos}})
   .then(data => res.json(data))
   .catch(err => res.status(400).json(err));
@@ -102,9 +100,9 @@ io.on('connection', function(socket){
 });
 
 http.listen(3001, function(){
-console.log('listening on *:3001');
+console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
-});
+// app.listen(PORT, function() {
+//   console.log(`🌎 ==> Server now on port ${PORT}!`);
+// });
