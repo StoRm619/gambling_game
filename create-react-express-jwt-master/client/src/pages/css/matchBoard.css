@@ -1,31 +1,37 @@
-.matchDash{
+.dashboardPosition{
     position: relative;
 }
+#paperStyle{
+    background-color: #312e2e;
+    color: #ebebeb;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
 @media only screen and (min-width: 595px) {
-.chat{
-    width: 95%;
+#paperStyle{
+    width: 30em;
 }
 }
 
 @media only screen and (min-width: 760px) {
-.chat{
-    width: 95%;
+#paperStyle{
+    width: 30em;
     }
     
 }
 @media only screen and (min-width: 1022px) {
-.chat{
+#paperStyle{
     position: absolute;
-    width: 50%;
-    right: 10px;
+    width: 30em;
+    right: -20px;
     top: -50px;
 }
 }
 @media only screen and (min-width: 1200px) {
-.chat{
+#paperStyle{
     position: absolute;
-    width: 45%;
-    right: 80px;
-    top: 0;
+    width: 30em;
+    right: 180px;
+    top: -50px;
 }
 }
