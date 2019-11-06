@@ -26,13 +26,16 @@ const useStyles = makeStyles(theme => ({
   },
   chatWindow: {
     width: "70%",
-  chatBox: {
-    width: "85%"
-  },
-  button: {
-    width: "15%"
+    chatBox: {
+      width: "85%"
+    },
+    button: {
+      width: "15%"
+    }
   }
-}));
+})
+);
+
 
 export default function Dashboard() {
   const classes = useStyles();
