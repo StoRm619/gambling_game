@@ -50,7 +50,7 @@ export default function Store(props) {
     const [allChats, dispatch] = React.useReducer(reducer, initState);
     
     if(!socket) {
-        socket= io(":3001")
+        socket= io()
         socket.on('chat message', function(msg){
             dispatch({type:"RECEIVE_MESSAGE", payload: msg})
           });
