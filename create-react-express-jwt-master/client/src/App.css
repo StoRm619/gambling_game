@@ -6,21 +6,21 @@ body{
   background-color: black;
   color: #ebebeb;
   font-family: 'nordic';
-}
-.row {
-  margin: 0;
-}
-.matchDash{
-  width: 100%;
-  height: 100%;
   background-image: url("./utils/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.row {
+  margin: 0;
+}
+.row {
+  margin: 0;
+}
+
 .matches {
-      background-image: url(".//utils/simpleTexture.jpg");
+      background-image: url("./utils/simpleTexture.jpg");
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -38,12 +38,6 @@ body{
 .table {
   padding: 0;
   margin-bottom: 0;
-}
-body {
-  background-image: url("./utils/simpleTexture.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .App {
   text-align: center;
@@ -103,6 +97,18 @@ body {
 }
 .mainTwitchPlayer {
   margin-top: 30px;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.mainMatchInfoRow {
+  margin-top: 15px;
+}
+.mainMatchInfo {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   height: 350px;
 }
 .mainGameInfo {
@@ -113,6 +119,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .teamInfo {
   padding: 0;
   margin: 0 auto;
@@ -144,6 +151,7 @@ body {
 /* Home page - carousel */
 .carouselRow {
   margin-top: 30px;
+
 }
 .carouselHeader {
   margin: 0 auto;
@@ -160,6 +168,8 @@ body {
   .matchesBox{
     width: 100%;
     padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   }
   .matchCard{
     margin: auto;

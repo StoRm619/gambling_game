@@ -1,5 +1,26 @@
+@font-face {
+  font-family: 'bigNoodle';
+  src: url(../../utils/Bignoodletitling-8ojz.ttf);
+}
 
+#betAmountSelect{
+    width: 200px;
+}
+h6{
+  text-align: center;
+  font-family: 'bigNoodle';
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
 
+}
+.detailBetContainer{
+    background-color: #312e2e;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+
+}
 @media only screen and (min-width: 595px) {
     .chosenTwitchPlayer{
                 width: 100%;

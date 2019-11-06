@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Jumbotron, Container } from 'reactstrap';
 import withAuth from './components/withAuth';
 import MainMatch from './components/MainMatch';
 import ScheduleTable from './components/Schedule Table/ScheduleTable';
@@ -11,7 +12,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
+        <div>
+          <Jumbotron fluid>
+            <Container fluid>
+              <h1 className="display-3">GG</h1>
+              <p className="lead"><strong>Real Time ESports Stakes with Real People</strong></p>
+            </Container>
+          </Jumbotron>
+        </div>
         <div className="row">
           <MainMatch />
         </div>
@@ -28,7 +36,9 @@ class App extends Component {
         <div className="row">
             <ScheduleTable />
         </div>
-
+        <footer>
+        
+        </footer>
       </div>
     );
   }
