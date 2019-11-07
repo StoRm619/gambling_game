@@ -47,6 +47,7 @@ class MatchesBoard extends Component {
                                 teamBLogo={match.opponents[1] && match.opponents[1].opponent.image_url}                           
                                 teamAName={match.opponents[0] && match.opponents[0].opponent.name}
                                 teamBName={match.opponents[1] && match.opponents[1].opponent.name}
+                                matchName={match.name}
 
                             
                             
