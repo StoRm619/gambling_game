@@ -1,0 +1,29 @@
+#profileJumbotron{
+    padding-left: 20px;
+}
+.profileTable{
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+    background-color: rgb(3, 3, 36);
+    color: #ebebeb;
+    border: solid;
+    border-color: #2b2c3883;
+    width:600px;
+}
+.profileTableHeader{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    background-color: rgb(211, 144, 20);
+    color: black;
+    font-weight: bold;
+    font-family: PS;
+    font-size: 1.5em;
+    border-color: #2b2c3883;
+    width:600px;
+
+}

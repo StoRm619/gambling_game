@@ -1,11 +1,16 @@
 @font-face {
-  font-family: 'nordic';
-  src: url(./utils/NordicaAdvancedRegular.otf);
+  font-family: 'PS';
+  src: url(./utils/GamestationDisplayObl.otf);
 }
+@font-face {
+  font-family: 'coderoman';
+  src: url(./utils/CodeNewRoman-aOAK.ttf);
+}
+
 body{
   background-color: black;
   color: #ebebeb;
-  font-family: 'nordic';
+  font-family: 'coderoman';
   background-image: url("./utils/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -154,6 +159,7 @@ body{
 
 }
 .carouselHeader {
+  font-family: PS;
   margin: 0 auto;
   text-align: center;
   padding-top: 5px;

@@ -17,7 +17,8 @@ class MainMatch extends Component {
                 gameNumber: res.data[2].number_of_games
             })
         }
-        )
+        );
+        
     }
     render() {
         return (<div className="col-sm-11 col-md-6 mainMatch">
