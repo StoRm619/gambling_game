@@ -7,7 +7,7 @@ const morgan = require('morgan'); // used to see requests
 const db = require('./models');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3001;
 
 const isAuthenticated = require("./config/isAuthenticated");
 const auth = require("./config/auth");
@@ -109,6 +109,7 @@ app.use(function (err, req, res, next) {
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+
 
 io.on('connection', function (socket) {
   console.log('a user connected');

@@ -28,6 +28,9 @@ background-image: url("https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4
     width: 557px;
 
 }
+#TextField {
+    color: white
+ }
 @media only screen and (min-width: 595px) {
 #paperStyle{
     position: absolute;
