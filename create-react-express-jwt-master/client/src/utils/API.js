@@ -23,5 +23,8 @@ export default {
   currentmatchdata: () => {
     return axios.get("https://api.pandascore.co/lives?token=71QvB9vCC3xE099n8yoHlFK06KsAs3XbIJQy_QN0C9PK--yqOQg")
   },
+  payWinners: (username, chronos) => {
+    return axios.put('/api/payWinners', { username: username, chronos: chronos})
+  }
 }
 
