@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import withAuth from './../components/withAuth';
-import ChosenStream from '../components/ChosenStream/ChosenStream.js';
-import Store from '../components/Store/Store.js';
-import Dashboard from '../components/Dashboard/Dashboard.js';
-import { Jumbotron, Container } from 'reactstrap';
+
 import '../pages/css/matchBoard.css';
 import API from './../utils/API';
 var moment = require('moment');
