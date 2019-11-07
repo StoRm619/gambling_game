@@ -5,12 +5,15 @@ import './matchcard.css';
 
 function Matchcard (props){
 
+        data = {}
+    
+    
         return (
             <div className="matchCard">
                 <Card inverse>
                     <Link className="active" to={{
                         pathname: "/matchDash",
-                        data: props // your data array of objects
+                        data: data // your data array of objects
                     }}>
                     <CardImg id="matchCardImg" width="100%" src="https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f" alt={props.name} />
                     <CardImgOverlay className="position">
