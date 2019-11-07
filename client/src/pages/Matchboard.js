@@ -9,15 +9,15 @@ import '../pages/css/matchBoard.css';
 import API from './../utils/API';
 var moment = require('moment');
 
-// const data = {
-//   eventName: "Mdl europe season 32 2019",
-//   scheduledAt: "2019-11-07T15:00:00Z",
-//   teamALogo:
-//     "https://cdn.pandascore.co/images/team/image/3288/600px_virtus.pro_2019.png",
-//   teamBLogo: "https://cdn.pandascore.co/images/team/image/125785/7718.png",
-//   teamAName: "Virtus.pro",
-//   teamBName: "Movistar Riders"
-// };
+const data = {
+  eventName: "Mdl europe season 32 2019",
+  scheduledAt: "2019-11-07T15:00:00Z",
+  teamALogo:
+    "https://cdn.pandascore.co/images/team/image/3288/600px_virtus.pro_2019.png",
+  teamBLogo: "https://cdn.pandascore.co/images/team/image/125785/7718.png",
+  teamAName: "Virtus.pro",
+  teamBName: "Movistar Riders"
+};
 
 
 class MatchDash extends Component {
@@ -116,8 +116,8 @@ class MatchDash extends Component {
         };
         
         render() {
-          const { data } = this.props.location;
-          console.log(JSON.stringify(data))
+          // const { data } = this.props.location;
+          // console.log(JSON.stringify(data))
           return (
             <div className="matchDash">
             <div>
