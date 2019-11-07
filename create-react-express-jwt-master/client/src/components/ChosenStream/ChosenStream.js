@@ -63,7 +63,7 @@ class ChosenStream extends Component {
                                     </Col>
                                 </Row>
                             </FormGroup>
-                            <Button>Submit</Button>
+                            <Button className="submit">Submit</Button>
                         </Form>
                     </Container>
                 </div>

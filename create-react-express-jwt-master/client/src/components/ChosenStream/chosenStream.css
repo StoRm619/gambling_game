@@ -5,21 +5,34 @@
 
 #betAmountSelect{
     width: 200px;
+    
 }
 h6{
   text-align: center;
   font-family: 'bigNoodle';
   font-size: 2em;
+
   padding: 0;
   margin: 0;
 
 }
+.submit{
+background-color: rgb(211, 144, 20);
+color: black;
+}
 .detailBetContainer{
-    background-color: #312e2e;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 4px;
-
+    background-color: rgb(3, 3, 36);
+    color: #ebebeb;
+    border: solid;
+    border-color: #46474da8;
+    background-image: url("https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media only screen and (min-width: 595px) {
     .chosenTwitchPlayer{

@@ -3,21 +3,23 @@
   src: url(../../utils/Bignoodletitling-8ojz.ttf);
 }
 @font-face {
-  font-family: 'nordic';
-  src: url(../../utils/NordicaAdvancedRegular.otf);
+  font-family: 'PS';
+  src: url(../../utils/GamestationDisplay.otf);
 }
 @font-face {
-  font-family: 'nordicBig';
-  src: url(../../utils/NordicaAdvancedRegularExtended.otf);
+  font-family: 'coderoman';
+  src: url(../../utils/CodeNewRoman-aOAK.ttf);
 }
 
 .display-3{
-  font-family: 'bigNoodle';
+  font-family: 'PS';
+  font-size: 4.5em;
   text-shadow: 3px 2px #141414b2;
 }
 .lead{
     text-shadow: 1px 1px #141414b2;
-    font-family: 'nordic';
+    font-family: 'bigNoodle';
+    font-size:3em
 
 }
 .jumbotron{
@@ -42,7 +44,7 @@
   margin: auto;
 }
 .card-img{
-  border-radius: 0;
+  border-radius: 8px;
 }
 .textBack{
     width: 40%;
@@ -55,7 +57,7 @@ position: relatve;
 .cardTitle{
     margin-bottom: 0px;
     font-size: 1.5em;
-    font-family: 'bigNoodle';
+    font-family: 'PS';
 
 }
 .teamALogo{

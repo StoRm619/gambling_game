@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ScheduleTable.css';
+import './BetTable.css';
 import API from "../../utils/API";
 var moment = require('moment');
 
@@ -21,9 +21,9 @@ class ScheduleTable extends Component {
     }
     render() {
         return (
-          <div className="col-sm-12 col-md-5 eventSchedule">
-            <div className="eventScheduleHeader">Upcoming matches: </div>
-            <table className="table eventScheduleTable table-dark">
+          <div className="col-sm-12 col-md-5 bets">
+            <div className="betHeader">Upcoming matches: </div>
+            <table className="table betTable table-dark">
               <thead>
                 <tr>
                   <th scope="col">Event</th>

@@ -1,10 +1,31 @@
 .dashboardPosition{
     position: relative;
 }
+.currentBal{
+    width: 100%;
+    height: 50px;
+    color: rgb(211, 144, 20);
+    background-color: rgb(3, 3, 36);
+    padding: 20px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-image: url("https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid;
+    border-color: #00000083;
+
+}
 #paperStyle{
     background-color: #312e2e;
     color: #ebebeb;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 257px;
+    border: solid;
+    border-color: #7a747483;
+    width: 557px;
 
 }
 #TextField {
@@ -12,20 +33,22 @@
  }
 @media only screen and (min-width: 595px) {
 #paperStyle{
-    width: 30em;
+    position: absolute;
+    bottom:-500px;
+    
 }
 }
 
 @media only screen and (min-width: 760px) {
 #paperStyle{
-    width: 30em;
+    position: absolute;
+    bottom: -500px;
     }
     
 }
 @media only screen and (min-width: 1022px) {
 #paperStyle{
     position: absolute;
-    width: 30em;
     right: -20px;
     top: -50px;
 }
@@ -33,8 +56,7 @@
 @media only screen and (min-width: 1200px) {
 #paperStyle{
     position: absolute;
-    width: 30em;
-    right: 180px;
+    right: 43px;
     top: -50px;
 }
 }

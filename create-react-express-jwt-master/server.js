@@ -7,7 +7,7 @@ const morgan = require('morgan'); // used to see requests
 const db = require('./models');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3003;
 
 const isAuthenticated = require("./config/isAuthenticated");
 const auth = require("./config/auth");
@@ -62,6 +62,13 @@ app.put('/api/update', (req, res) => {
 
 app.put('/api/updateB', (req, res) => {
   db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, userBetB: req.body.userBetB } })
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json(err));
+})
+
+app.put('/api/payWinners', (req, res) => {
+  //at each user in loop add chronos, and reset bets for next round
+  db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, userBetA: 0 , userBetB: 0} })
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
 })
