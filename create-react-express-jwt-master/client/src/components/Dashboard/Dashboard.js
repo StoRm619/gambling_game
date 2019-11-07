@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   },
   flex: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
   topicsWindow: {
     width: "30%",
@@ -72,7 +72,7 @@ export default function Dashboard() {
             {allChats[activeTopic].map((chat, i) => (
               <div className={classes.flex} key={i} >
                 <Chip label={chat.from} />
-                <Typography variant="body1" gutterBottom>
+                <Typography className="chatText" variant="body1" gutterBottom>
                   {chat.msg}
                 </Typography>
               </div>

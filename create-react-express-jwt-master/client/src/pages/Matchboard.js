@@ -38,7 +38,6 @@ class MatchDash extends Component {
     // console.log(JSON.stringify(data))
     componentDidMount() {
         API.getAllUsers().then(res => {
-            //console.log(res.data)
             for (let i = 0; i < res.data.length; i++) {
                 this.setState({
                     poolA: this.state.poolA + res.data[i].userBetA,
@@ -51,7 +50,6 @@ class MatchDash extends Component {
         API.getUser(this.props.user.id).then(res => {
             this.setState({
                 username: res.data.username,
-                email: res.data.email,
                 chronos: res.data.chronos,
                 userBetA: res.data.userBetA,
                 userBetB: res.data.userBetB
@@ -59,19 +57,29 @@ class MatchDash extends Component {
         })
 
     }
-    handleGameLogic = event => {
+    handleGameLogic = (event) => {
         event.preventDefault();
-        alert(`You won ${Math.floor((this.state.userBetA / this.state.poolA) * this.state.poolTotal)} chronos from betiting on team A.`)
 
-        this.setState({
-            chronos: this.state.chronos + Math.floor((this.state.userBetA / this.state.poolA) * this.state.poolTotal),
-            userBetA: 0,
-            poolA: 0
+        //These perform calculations for users that won
+        API.getAllUsers().then(res => {
+            for (let i = 0; i < res.data.length; i++) {
+                //if the user has placed a bet on winning team A
+                if (res.data[i].userBetA > 0) {
+                    //calculate how much they won, add to balance, call API to update database
+                    API.payWinners(res.data[i].username, res.data[i].chronos
+                        + parseInt(Math.floor((res.data[i].userBetA / this.state.poolA) * this.state.poolTotal)))
+                }
+            }
+            //reset fields on page
+            this.setState({
+                userBetA: 0,
+                poolA: 0,
+                userBetB: 0,
+                poolB: 0,
+                poolTotal: 0
+            })
         })
 
-        API.getUser(this.props.user.id).then(res => {
-            API.updateUser(this.state.username, this.state.chronos, this.state.userBetA)
-        });
     }
 
     handleInputChange = event => {
@@ -81,7 +89,6 @@ class MatchDash extends Component {
     }
 
     handleFormSubmit = event => {
-        console.log(document.querySelector('input[name="chooseTeam"]:checked').value)
         // Preventing the default behavior of the form submit (which is to refresh the page)
         event.preventDefault();
         if (document.querySelector('input[name="chooseTeam"]:checked').value === 'TeamA') {
@@ -95,7 +102,7 @@ class MatchDash extends Component {
             API.getUser(this.props.user.id).then(res => {
                 API.updateUser(this.state.username, this.state.chronos, this.state.userBetA)
             });
-        } else if (document.querySelector('input[name="chooseTeam"]:checked').value === 'TeamB' ) {
+        } else if (document.querySelector('input[name="chooseTeam"]:checked').value === 'TeamB') {
             this.setState({
                 chronos: this.state.chronos - parseInt(this.state.inputValue),
                 userBetB: this.state.userBetB + parseInt(this.state.inputValue),
