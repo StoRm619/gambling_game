@@ -19,6 +19,7 @@ h6{
 .submit{
 background-color: rgb(211, 144, 20);
 color: black;
+
 }
 .detailBetContainer{
     padding: 10px;
@@ -29,10 +30,11 @@ color: black;
     border: solid;
     border-color: #46474da8;
     background-image: url("https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
 }
 @media only screen and (min-width: 595px) {
     .chosenTwitchPlayer{
