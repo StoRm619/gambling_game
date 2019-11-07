@@ -10,7 +10,7 @@ class ScheduleTable extends Component {
     matches: []
   }
   componentDidMount() {
-    API.livedata(0).then(res => {
+    API.livedata().then(res => {
       this.setState({
         teamAName: res.data[2].opponents[0].opponent.name,
         teamBName: res.data[2].opponents[1].opponent.name,
