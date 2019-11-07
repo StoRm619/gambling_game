@@ -103,6 +103,7 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+
 io.on('connection', function (socket) {
   console.log('a user connected');
   socket.on('chat message', function (msg) {

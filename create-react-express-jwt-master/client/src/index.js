@@ -9,7 +9,7 @@ import axios from "axios";
 
 // Our Components
 import Login from './pages/Login';
-import Profile from './pages/Profile';
+import admin from './pages/admin';
 import AddMoney from './pages/AddMoney'
 import Signup from './pages/Signup';
 import MatchesBoard from './pages/Matches';
@@ -30,7 +30,7 @@ ReactDOM.render(
             <Route exact path="/" component={App} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
-            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/admin" component={admin} />
             <Route exact path="/addMoney" component={AddMoney} />
             <Route exact path="/matchesBoard" component={MatchesBoard} />
             <Route exact path="/matchDash" component={MatchDash} />
