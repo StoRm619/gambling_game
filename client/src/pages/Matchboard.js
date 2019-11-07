@@ -138,7 +138,7 @@ class MatchDash extends Component {
             </div>
             <div className="dashboardPosition">
               <div className="chosenTeamDetails"></div>
-              {/* <ChosenStream /> */}
+              <ChosenStream />
               <BetTable />
               <div className="chat">
                 <Store>
