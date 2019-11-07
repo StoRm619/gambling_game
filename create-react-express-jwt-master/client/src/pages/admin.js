@@ -50,29 +50,49 @@ class admin extends Component {
         event.preventDefault();
         const randomWinner = Math.round(Math.random())
         console.log(randomWinner)
-       if(randomWinner === 0){
-        this.setState({
-            chronos: this.state.chronos + Math.floor((this.state.userBetA / this.state.poolA) * this.state.poolTotal),
-            userBetA: 0,
-            poolA: 0
-        })  
-        API.getUser(this.props.user.id).then(res => {
-         API.updateUser(this.state.username, this.state.chronos, this.state.userBetA)
-        });
-    }else{
+        if (randomWinner === 0) {
+            alert("Team A has won");
+            API.getAllUsers().then(res => {
+                for (let i = 0; i < res.data.length; i++) {
+                    //if the user has placed a bet on winning team A
+                    if (res.data[i].userBetA > 0) {
+                        //calculate how much they won, add to balance, call API to update database
+                        API.payWinners(res.data[i].username, res.data[i].chronos
+                            + parseInt(Math.floor((res.data[i].userBetA / this.state.poolA) * this.state.poolTotal)))
+                    }
+                }
+                //reset fields on page
+                this.setState({
+                    userBetA: 0,
+                    poolA: 0,
+                    userBetB: 0,
+                    poolB: 0,
+                    poolTotal: 0
+                })
+            })
+        } else {
+            alert("Team B has won");
+            API.getAllUsers().then(res => {
+                for (let i = 0; i < res.data.length; i++) {
+                    //if the user has placed a bet on winning team A
+                    if (res.data[i].userBetB > 0) {
+                        //calculate how much they won, add to balance, call API to update database
+                        API.payWinners(res.data[i].username, res.data[i].chronos
+                            + parseInt(Math.floor((res.data[i].userBetB / this.state.poolB) * this.state.poolTotal)))
+                    }
+                }
+                //reset fields on page
+                this.setState({
+                    userBetA: 0,
+                    poolA: 0,
+                    userBetB: 0,
+                    poolB: 0,
+                    poolTotal: 0
+                })
+            })
 
-        this.setState({
-            chronos: this.state.chronos + Math.floor((this.state.userBetB / this.state.poolB) * this.state.poolTotal),
-            userBetB: 0,
-            poolB: 0
-        })  
-        API.getUser(this.props.user.id).then(res => {
-         API.updateUser(this.state.username, this.state.chronos, this.state.userBetA)
-        });
+        }
     }
-      
-    }
-
     handleInputChange = event => {
         this.setState({
             inputValue: event.target.value
@@ -94,7 +114,7 @@ class admin extends Component {
             API.getUser(this.props.user.id).then(res => {
                 API.updateUser(this.state.username, this.state.chronos, this.state.userBetA)
             });
-        } else if (document.querySelector('input[name="chooseTeam"]:checked').value === 'TeamB' ) {
+        } else if (document.querySelector('input[name="chooseTeam"]:checked').value === 'TeamB') {
             this.setState({
                 chronos: this.state.chronos - parseInt(this.state.inputValue),
                 userBetB: this.state.userBetB + parseInt(this.state.inputValue),
@@ -108,18 +128,14 @@ class admin extends Component {
         }
 
     };
-
     render() {
         return (
-           
-                <div className="row">
-                    <button type="submit" className="btn btn-primary aWinButton" onClick={this.handleGameLogic}>Random winner</button>
-                </div>
-        
+            <div className="row">
+                <button type="submit" className="btn btn-primary aWinButton" onClick={this.handleGameLogic}>Random winner</button>
+            </div>
         )
 
     };
-
 }
 
 export default withAuth(admin);
