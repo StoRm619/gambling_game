@@ -101,10 +101,10 @@ class ChosenStream extends Component {
                                 onSubmit={this.handleFormSubmit}
                                 className="addMoneyForm col-sm-11 col-md-5"
                             >
-                                <label>TeamA</label>
+                                <label>{this.state.teamAName}</label>
                                 <input type="radio" name="chooseTeam" value="TeamA" />
                                 <br />
-                                <label>TeamB</label>
+                                <label>{this.state.teamBName}</label>
                                 <input type="radio" name="chooseTeam" value="TeamB" />
                                 <div className="form-group row col-sm-12">
                                     <label htmlFor="depositedMoney">Place your bet </label>
