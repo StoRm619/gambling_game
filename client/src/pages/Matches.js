@@ -48,9 +48,6 @@ class MatchesBoard extends Component {
                                 teamAName={match.opponents[0] && match.opponents[0].opponent.name}
                                 teamBName={match.opponents[1] && match.opponents[1].opponent.name}
                                 matchName={match.name}
-
-                            
-                            
                                 />
 
                         ))}

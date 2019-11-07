@@ -51,12 +51,9 @@ class admin extends Component {
             alert("Team A has won");
             API.getAllUsers().then(res => {
                 for (let i = 0; i < res.data.length; i++) {
-                    //if the user has placed a bet on winning team A
-                    if (res.data[i].userBetA > 0) {
                         //calculate how much they won, add to balance, call API to update database
                         API.payWinners(res.data[i].username, res.data[i].chronos
                             + parseInt(Math.floor((res.data[i].userBetA / this.state.poolA) * this.state.poolTotal)))
-                    }
                 }
                 //reset fields on page
                 this.setState({
@@ -71,12 +68,9 @@ class admin extends Component {
             alert("Team B has won");
             API.getAllUsers().then(res => {
                 for (let i = 0; i < res.data.length; i++) {
-                    //if the user has placed a bet on winning team A
-                    if (res.data[i].userBetB > 0) {
                         //calculate how much they won, add to balance, call API to update database
                         API.payWinners(res.data[i].username, res.data[i].chronos
                             + parseInt(Math.floor((res.data[i].userBetB / this.state.poolB) * this.state.poolTotal)))
-                    }
                 }
                 //reset fields on page
                 this.setState({
