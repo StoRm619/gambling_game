@@ -21,50 +21,29 @@ class MatchDash extends Component {
     // const { data } = this.props.location;
     // console.log(JSON.stringify(data))
     return (
-      <div className="matchDash">
-        <div>
-          <Jumbotron fluid>
+      
+            <div className="matchDash">
+            <div>
+            <Jumbotron fluid>
             <Container fluid>
-              <h1 className="display-3">{data.eventName}</h1>
-              <p className="lead">
-                <strong>
-                  {data.teamAName} vs {data.teamBName}
-                </strong>
-              </p>
+            <h1 className="display-3">{ data.eventName }</h1>
+            <p className="lead"><strong>{data.teamAName} | VS | {data.teamBName}</strong></p>
             </Container>
-          </Jumbotron>
-        </div>
-        <ChosenStream />
-        <div className="chat">
-          <Store>
+            </Jumbotron>
+            </div>
+            <div className="dashboardPosition">
+            <div className="chosenTeamDetails">
+            
+            </div>
+            <ChosenStream />
+            <div className="chat">
+            <Store>
             <Dashboard />
-          </Store>
-        </div>
-      </div>
-    );
-    // return (
-    //     <div className="matchDash">
-    //         <div>
-    //             <Jumbotron fluid>
-    //                 <Container fluid>
-    //                     <h1 className="display-3">{ data.eventName }</h1>
-    //                     <p className="lead"><strong>{data.} vs Team B</strong></p>
-    //                 </Container>
-    //             </Jumbotron>
-    //         </div>
-    //     <div className="dashboardPosition">
-    //     <div className="chosenTeamDetails">
-
-    //     </div>
-    //         <ChosenStream />
-    //         <div className="chat">
-    //             <Store>
-    //                 <Dashboard />
-    //             </Store>
-    //         </div>
-    //     </div>
-    //     </div>
-    // )
+            </Store>
+            </div>
+            </div>
+            </div>
+            );
   }
 }
 
