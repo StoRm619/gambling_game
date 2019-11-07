@@ -15,9 +15,13 @@
 a{
     color:#ebebeb;
 }
+.card-text{
+    font-size: 1.3em;
+}
 #matchCardImg{
     height: 200px;
     background-color: #bebabaa2;
     opacity: .9;
+    border-radius: 0px;
 
 }

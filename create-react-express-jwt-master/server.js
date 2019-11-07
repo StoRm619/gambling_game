@@ -7,7 +7,7 @@ const morgan = require('morgan'); // used to see requests
 const db = require('./models');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3003;
 
 const isAuthenticated = require("./config/isAuthenticated");
 const auth = require("./config/auth");
