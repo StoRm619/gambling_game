@@ -14,9 +14,6 @@ class Navbar extends Component {
             return (
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/admin">Profile</Link>
-                    </li>
-                    <li className="nav-item">
                         <Link className="nav-link active" to="/addMoney">Add Money</Link>
                     </li>
                     <li className="nav-item">

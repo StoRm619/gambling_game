@@ -8,6 +8,7 @@ const db = require('./models');
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 const PORT = process.env.PORT || 3001;
+const axios = require('axios');
 
 const isAuthenticated = require("./config/isAuthenticated");
 const auth = require("./config/auth");
@@ -39,6 +40,12 @@ app.post('/api/login', (req, res) => {
     .logUserIn(req.body.username, req.body.password)
     .then(dbUser => res.json(dbUser))
     .catch(err => res.status(400).json(err));
+});
+
+app.get('/api/livedata',(req, res) => {
+  axios.get("https://api.pandascore.co/matches?token=" + process.env.PANDASCORE_TOKEN)
+    .then(response => res.json(response.data))
+
 });
 
 // SIGNUP ROUTE

@@ -19,18 +19,17 @@ class ChosenStream extends Component {
     z
 
     componentDidMount() {
-        API.livedata(0).then(res => {
-            console.log(res.data)
+        API.livedata().then(data => {
             this.setState({
-                eventName: res.data[2].serie.full_name,
-                leagueName: res.data[2].league.name,
-                leagueLogo: res.data[2].league.image_url,
-                teamAName: res.data[2].opponents[0].opponent.name,
-                teamBName: res.data[2].opponents[1].opponent.name,
-                teamALogo: res.data[2].opponents[0].opponent.image_url,
-                teamBLogo: res.data[2].opponents[1].opponent.image_url,
-                gameNumber: res.data[2].number_of_games,
-                scheduledAt: res.data[2].scheduled_at
+                eventName: data[2].serie.full_name,
+                leagueName: data[2].league.name,
+                leagueLogo: data[2].league.image_url,
+                teamAName: data[2].opponents[0].opponent.name,
+                teamBName: data[2].opponents[1].opponent.name,
+                teamALogo: data[2].opponents[0].opponent.image_url,
+                teamBLogo: data[2].opponents[1].opponent.image_url,
+                gameNumber: data[2].number_of_games,
+                scheduledAt: data[2].scheduled_at
             })
         })
         API.getUser(this.props.user.id).then(res => {
@@ -80,7 +79,7 @@ class ChosenStream extends Component {
     render() {
         return (
             <div className="chosenTwitchPlayer">
-                <iframe
+                {/* <iframe
                     src="https://player.twitch.tv/?channel=summit1g&muted=true&autoplay=false"
                     height="100%"
                     width="100%"
@@ -88,7 +87,7 @@ class ChosenStream extends Component {
                     title="mainTwitch"
                     scrolling="no"
                 >
-                </iframe>
+                </iframe> */}
                 <div className="streamDetails">
                     <div className="detailBetContainer">
                         <Container>

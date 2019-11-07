@@ -9,7 +9,7 @@ export default {
     return axios.post('api/signup', { username: username, email: email, password: password });
   },
   livedata: () => {
-    return axios.get("https://api.pandascore.co/matches?token=71QvB9vCC3xE099n8yoHlFK06KsAs3XbIJQy_QN0C9PK--yqOQg")
+    return axios.get("/api/livedata")
   },
   updateUser: (username, chronos, userBetA) => {
     return axios.put('/api/update', { username: username, chronos: chronos, userBetA: userBetA })
