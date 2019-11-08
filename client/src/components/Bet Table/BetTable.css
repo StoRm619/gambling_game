@@ -10,7 +10,7 @@
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 25px;
-  width: 557px;
+  padding: 0;
 }
 .betHeader {
     border-top-left-radius: 8px;
@@ -25,8 +25,6 @@
     font-family: PS;
     font-size: 1.5em;
     border-color: #46474da8;
-
-
   }
   .betTable {
     border-color: #46474da8;
@@ -34,12 +32,30 @@
     border-bottom-right-radius: 8px;
     background-color: rgb(3, 3, 36);
     font-family: 'coderoman';
-  
+  }
+  @media only screen and (min-width: 595px) {
+    .bets {
+      width: 90%;
+      position: relative;
+      top: 570px;
+    }
   }
   @media only screen and (min-width: 768px) {
     .bets {
+      width: 90%;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .bets {
+      width: 44%;
       position: absolute;
-      top: 257px;
-      right: 110px;
+      top: 275px;
+      right: 2%;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .bets {
+      width: 40%;
+      top: 300px;
     }
   }

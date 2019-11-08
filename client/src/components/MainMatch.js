@@ -10,11 +10,11 @@ class MainMatch extends Component {
         API.livedata(0).then(res => {
             console.log(res.data)
             this.setState({
-                teamAName: res.data[2].opponents[0].opponent.name,
-                teamBName: res.data[2].opponents[1].opponent.name,
-                teamALogo: res.data[2].opponents[0].opponent.image_url,
-                teamBLogo: res.data[2].opponents[1].opponent.image_url,
-                gameNumber: res.data[2].number_of_games
+                teamAName: res.data[0].opponents[0].opponent.name,
+                teamBName: res.data[0].opponents[1].opponent.name,
+                teamALogo: res.data[0].opponents[0].opponent.image_url,
+                teamBLogo: res.data[0].opponents[1].opponent.image_url,
+                gameNumber: res.data[0].number_of_games
             })
         }
         );

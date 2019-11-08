@@ -10,18 +10,19 @@ class ScheduleTable extends Component {
     }
     componentDidMount() {
         API.livedata(0).then(res => {
+          console.log(res.data)
             this.setState({
-                teamAName: res.data[2].opponents[0].opponent.name,
-                teamBName: res.data[2].opponents[1].opponent.name,
-                matchTime: moment(res.data[2].scheduled_at).format('h:mm a'),
-                eventName: res.data[2].league.name
+                teamAName: res.data[15].opponents[0].opponent.name,
+                teamBName: res.data[15].opponents[1].opponent.name,
+                matchTime: moment(res.data[15].scheduled_at).format('h:mm a'),
+                eventName: res.data[15].league.name
             })
         }
         )
     }
     render() {
         return (
-          <div className="col-sm-12 col-md-5 bets">
+          <div className="bets">
             <div className="betHeader">Upcoming matches: </div>
             <table className="table betTable table-dark">
               <thead>

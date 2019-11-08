@@ -6,15 +6,8 @@ export const CTX = React.createContext();
 const initState = {
     general: [
         
-            {from: "rafa", msg: "hello"},
-            {from: "gladys", msg: "hello"},
-            {from: "luis", msg: "hello"},
+            {from: "rafa", msg: "hello"}
         
-    ],
-    topic2:[
-        {from: "rafa", msg: "hello"},
-        {from: "rafa", msg: "hello"},
-        {from: "rafa", msg: "hello"},
     ]
 }
 
@@ -56,7 +49,8 @@ export default function Store(props) {
           });
     }
 
-    const user = "rafa" + Math.random(100).toFixed(2)
+    //const user = "rafa" + Math.random(100).toFixed(2)
+    const user = 'test'
 
 
     return (
