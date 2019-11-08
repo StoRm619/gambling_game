@@ -9,6 +9,7 @@ import '../pages/css/matchBoard.css';
 import API from './../utils/API';
 var moment = require('moment');
 
+
 const data = {
   eventName: "Mdl europe season 32 2019",
   scheduledAt: "2019-11-07T15:00:00Z",
@@ -60,35 +61,37 @@ class MatchDash extends Component {
   }
 
   render() {
-    return (
-      <div className="matchDash">
-        <div>
-          <Jumbotron fluid>
-            <Container fluid>
-              <h1 className="display-3">{data.eventName}</h1>
-              <p className="lead">
-                <strong>
-                  {data.teamAName} | VS | {data.teamBName}
-                </strong>
-              </p>
-            </Container>
-          </Jumbotron>
-        </div>
-        <div className="dashboardPosition">
-          <div className="chosenTeamDetails"></div>
-          <ChosenStream />
-          <BetTable />
-          <div className="chat">
-            <Store>
-              <Dashboard />
-            </Store>
+      // const { data } = this.props.location;
+      // console.log(JSON.stringify(data))
+      return (
+        <div className="matchDash">
+          <div>
+            <Jumbotron fluid>
+              <Container fluid>
+                <h1 className="display-3">{data.eventName}</h1>
+                <p className="lead">
+                  <strong>
+                    {data.teamAName} | VS | {data.teamBName}
+                  </strong>
+                </p>
+              </Container>
+            </Jumbotron>
+          </div>
+          <div className="dashboardPosition">
+            <div className="chosenTeamDetails"></div>
+            <ChosenStream />
+            <BetTable />
+            <div className="chat">
+              <Store user={this.props.user}>
+                <Dashboard />
+              </Store>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
 
-  };
+    };
 
-}
+  }
 
-export default withAuth(MatchDash);
+  export default withAuth(MatchDash);

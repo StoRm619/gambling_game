@@ -6,6 +6,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import axios from "axios";
+import withAuth from "./components/withAuth";
 
 // Our Components
 import Login from './pages/Login';
@@ -32,7 +33,7 @@ ReactDOM.render(
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/admin" component={admin} />
             <Route exact path="/addMoney" component={AddMoney} />
-            <Route exact path="/matchesBoard" component={MatchesBoard} />
+            <Route exact path="/matchesBoard" component={withAuth(MatchesBoard)} />
             <Route exact path="/matchDash" component={MatchDash} />
 
 

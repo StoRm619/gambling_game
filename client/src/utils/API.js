@@ -16,6 +16,9 @@ export default {
   livedata: () => {
     return axios.get("/api/livedata");
   },
+  livedata5: () => {
+    return axios.get("/api/livedata5")
+  },
   updateUser: (username, chronos, userBetA) => {
     return axios.put("/api/update", {
       username: username,
@@ -32,11 +35,6 @@ export default {
   },
   getAllUsers: () => {
     return axios.get("/api/allUsers");
-  },
-  currentMatchData: id => {
-    return axios.get(
-      `https://api.pandascore.co/csgo/matches${id}?token=71QvB9vCC3xE099n8yoHlFK06KsAs3XbIJQy_QN0C9PK--yqOQg`
-    );
   },
   payWinners: (username, chronos) => {
     return axios.put("/api/payWinners", {
