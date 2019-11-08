@@ -41,13 +41,19 @@ class admin extends Component {
                 userBetB: res.data.userBetB
             })
         })
+        API.livedata().then(res => {
+            console.log(res.data)
+              this.setState({
+                  teamAName: res.data[0].opponents[0].opponent.name,
+                  teamBName: res.data[0].opponents[1].opponent.name,
+                
+              })
+          }
+          )
 
     }
     handleGameLogic = event => {
         event.preventDefault();
-        const randomWinner = Math.round(Math.random())
-        console.log(randomWinner)
-        if (randomWinner === 0) {
             alert("Team A has won");
             API.getAllUsers().then(res => {
                 for (let i = 0; i < res.data.length; i++) {
@@ -64,8 +70,11 @@ class admin extends Component {
                     poolTotal: 0
                 })
             })
-        } else {
-            alert("Team B has won");
+      
+    }
+    handleGameLogicB = event => {
+        event.preventDefault();
+        alert("Team B has won");
             API.getAllUsers().then(res => {
                 for (let i = 0; i < res.data.length; i++) {
                         //calculate how much they won, add to balance, call API to update database
@@ -83,7 +92,7 @@ class admin extends Component {
             })
 
         }
-    }
+    
     handleInputChange = event => {
         this.setState({
             inputValue: event.target.value
@@ -122,11 +131,14 @@ class admin extends Component {
     render() {
         return (
             <div className="row">
-                <button type="submit" className="btn btn-primary aWinButton" onClick={this.handleGameLogic}>Random winner</button>
+                <button type="submit" className="btn btn-primary aWinButton" onClick={this.handleGameLogic} >{this.state.teamAName}</button>
+                <button type="submit"  className="btn btn-primary aWinButton" onClick={this.handleGameLogicB}  >{this.state.teamBName}</button>
             </div>
+          
         )
 
     };
+
 }
 
 export default withAuth(admin);
