@@ -17,23 +17,21 @@ const useStyles = makeStyles(theme => ({
   },
   flex: {
     display: "flex",
-    alignItems: "center",
+    alignItems: "center"
   },
   chatWindow: {
-    width: "70%",
+    width: "70%"
   },
   chatBox: {
-    width: "85%",
+    width: "85%"
   },
   button: {
     width: "15%"
   },
   chatUser: {
-    marginRight: "5px",
+    marginRight: "5px"
   }
-})
-);
-
+}));
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -42,7 +40,7 @@ export default function Dashboard() {
   const { allChats, sendChatAction, user } = React.useContext(CTX);
   const topics = Object.keys(allChats);
   // local state
-  const [activeTopic, /* changeActiveTopic */] = React.useState(topics[0]);
+  const [activeTopic /* changeActiveTopic */] = React.useState(topics[0]);
   const [textValue, changeTextValue] = React.useState("");
 
   return (
@@ -68,8 +66,8 @@ export default function Dashboard() {
           </div> */}
           <div className={classes.chatWindow}>
             {allChats[activeTopic].map((chat, i) => (
-              <div className={classes.flex} key={i} >
-                <Chip label={chat.from} className={classes.chatUser}/>
+              <div className={classes.flex} key={i}>
+                <Chip label={chat.from} className={classes.chatUser} />
                 <Typography className="chatText" variant="body1" gutterBottom>
                   {chat.msg}
                 </Typography>
@@ -84,6 +82,17 @@ export default function Dashboard() {
             label="Send a chat"
             value={textValue}
             onChange={e => changeTextValue(e.target.value)}
+            onKeyPress={e => {
+              if (e.key === "Enter") {
+                sendChatAction({
+                  from: user,
+                  msg: textValue,
+                  topic: activeTopic
+                });
+                changeTextValue("");
+              }
+              console.log("enter is pressed");
+            }}
           />
           <Button
             variant="contained"

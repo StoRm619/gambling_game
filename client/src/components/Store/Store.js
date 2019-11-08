@@ -1,7 +1,6 @@
 import React from "react";
 import io from "socket.io-client"
-import API from "../../utils/API" 
-/* import withAuth from './../withAuth'; */
+
 
 export const CTX = React.createContext();
 
