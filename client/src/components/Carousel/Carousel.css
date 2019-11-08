@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'PS';
+  src: url(../../utils/GamestationDisplayObl.otf);
+}
+@font-face {
+  font-family: 'coderoman';
+  src: url(../../utils/CodeNewRoman-aOAK.ttf);
+}
 .carousel {
     margin: 0 auto;
     padding: 0;
@@ -12,6 +20,11 @@
     padding: 0;
     height: 175px;
     background-color: rgb(3, 3, 36);
+    font-family: 'coderoman';
+
+}
+.carouselInfoTable {
+    margin-bottom: 20px;
 }
 @media only screen and (min-width: 768px) {
     .carousel {

@@ -18,7 +18,7 @@ class MatchesBoard extends Component {
             console.log(res.data)
             this.setState({
                 matches: res.data,
-            }, () => console.log(this.state.matches))
+            })
         })
     }
 
@@ -26,35 +26,53 @@ class MatchesBoard extends Component {
     
     render() {
         return (
-
-            <div className="matches">
-                <div>
-                    <Jumbotron fluid>
-                        <Container fluid>
-                            <h1 className="display-3">Scheduled Matches</h1>
-                            <p className="lead"><strong>This is where all of the matches are going to show up, bet on or not.</strong></p>
-                        </Container>
-                    </Jumbotron>
-                </div>
-                <div className="matchesBox">
-                    <Wrapper>
-                        {this.state.matches.map(match => (
-                            <MatchCard
-                                key={match.id}
-                                eventName={match.serie.full_name}
-                                scheduledAt={match.scheduled_at}
-                                teamALogo={match.opponents[0] && match.opponents[0].opponent.image_url}
-                                teamBLogo={match.opponents[1] && match.opponents[1].opponent.image_url}                           
-                                teamAName={match.opponents[0] && match.opponents[0].opponent.name}
-                                teamBName={match.opponents[1] && match.opponents[1].opponent.name}
-                                matchName={match.name}
-                                />
-
-                        ))}
-                    </Wrapper>
-                </div>
+          <div className="matches">
+            <div>
+              <Jumbotron fluid>
+                <Container fluid>
+                  <h1 className="display-3">Scheduled Matches</h1>
+                  <p className="lead">
+                    <strong>
+                      This is where all of the matches are going to show up, bet
+                      on or not.
+                    </strong>
+                  </p>
+                </Container>
+              </Jumbotron>
             </div>
-        )
+            <div className="matchesBox">
+              <Wrapper>
+                {this.state.matches.map(match => (
+                  <MatchCard
+                    key={match.id}
+                    id={match.id}
+                    value={match.id}
+                    onClick={() => {
+                        localStorage.setItem("matchID", this.match.id);
+                    }}
+                    eventName={match.serie.full_name}
+                    scheduledAt={match.scheduled_at}
+                    teamALogo={
+                      match.opponents[0] &&
+                      match.opponents[0].opponent.image_url
+                    }
+                    teamBLogo={
+                      match.opponents[1] &&
+                      match.opponents[1].opponent.image_url
+                    }
+                    teamAName={
+                      match.opponents[0] && match.opponents[0].opponent.name
+                    }
+                    teamBName={
+                      match.opponents[1] && match.opponents[1].opponent.name
+                    }
+                    matchName={match.name}
+                  />
+                ))}
+              </Wrapper>
+            </div>
+          </div>
+        );
 
     };
 

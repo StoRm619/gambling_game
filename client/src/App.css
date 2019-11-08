@@ -17,6 +17,10 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+footer{
+    background-color: rgb(3, 3, 36);
+    height: 50px;
+}
 .row {
   margin: 0;
 }
@@ -38,7 +42,7 @@ body{
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'coderoman';
     }
 .table {
   padding: 0;

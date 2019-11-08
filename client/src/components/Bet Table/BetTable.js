@@ -10,7 +10,6 @@ class ScheduleTable extends Component {
     }
     componentDidMount() {
         API.livedata(0).then(res => {
-          console.log(res.data)
             this.setState({
                 teamAName: res.data[15].opponents[0].opponent.name,
                 teamBName: res.data[15].opponents[1].opponent.name,
