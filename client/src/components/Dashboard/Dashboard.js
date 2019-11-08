@@ -89,6 +89,7 @@ export default function Dashboard() {
             variant="contained"
             color="primary"
             className={classes.button}
+            id="chatSubmit"
             onClick={() => {
               sendChatAction({
                 from: user,

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './ScheduleTable.css';
 import API from "../../utils/API";
-var moment = require('moment');
+import ScheduleTableRow from "../scheduleTableRow/scheduleTableRow";
+var moment = require('moment')
 
 class ScheduleTable extends Component {
   state = {
@@ -10,12 +11,9 @@ class ScheduleTable extends Component {
     matches: []
   }
   componentDidMount() {
-    API.livedata(0).then(res => {
+    API.livedata5(0).then(res => {
       this.setState({
-        teamAName: res.data[0].opponents[0].opponent.name,
-        teamBName: res.data[0].opponents[1].opponent.name,
-        matchTime: moment(res.data[0].scheduled_at).format('h:mm a'),
-        eventName: res.data[0].league.name
+        matches: res.data,
       })
 
     })
@@ -33,41 +31,20 @@ class ScheduleTable extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>{this.state.eventName}</td>
-              <td>
-                {this.state.teamAName} x {this.state.teamBName}
-              </td>
-              <td>{this.state.matchTime}</td>
-            </tr>
-            <tr>
-              <td>{this.state.eventName}</td>
-              <td>
-                {this.state.teamAName} x {this.state.teamBName}
-              </td>
-              <td>{this.state.matchTime}</td>
-            </tr>
-            <tr>
-              <td>{this.state.eventName}</td>
-              <td>
-                {this.state.teamAName} x {this.state.teamBName}
-              </td>
-              <td>{this.state.matchTime}</td>
-            </tr>
-            <tr>
-              <td>{this.state.eventName}</td>
-              <td>
-                {this.state.teamAName} x {this.state.teamBName}
-              </td>
-              <td>{this.state.matchTime}</td>
-            </tr>
-            <tr>
-              <td>{this.state.eventName}</td>
-              <td>
-                {this.state.teamAName} x {this.state.teamBName}
-              </td>
-              <td>{this.state.matchTime}</td>
-            </tr>
+            {this.state.matches.map(match => (
+              <ScheduleTableRow
+                key={match.id}
+                eventName={match.serie.full_name}
+                scheduledAt={moment(match.scheduled_at).format('h:mm a')}
+                teamAName={
+                  match.opponents[0] ? match.opponents[0].opponent.name : 'TBD'
+                }
+                teamBName={
+                  match.opponents[1] ? match.opponents[1].opponent.name : 'TBD'
+                }
+              />
+
+            ))}
           </tbody>
         </table>
       </div>

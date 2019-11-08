@@ -44,8 +44,8 @@ class admin extends Component {
         API.livedata().then(res => {
             console.log(res.data)
               this.setState({
-                  teamAName: res.data[15].opponents[0].opponent.name,
-                  teamBName: res.data[15].opponents[1].opponent.name,
+                  teamAName: res.data[0].opponents[0].opponent.name,
+                  teamBName: res.data[0].opponents[1].opponent.name,
                 
               })
           }
