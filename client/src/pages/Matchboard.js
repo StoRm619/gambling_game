@@ -78,7 +78,7 @@ class MatchDash extends Component {
           <ChosenStream />
           <BetTable />
           <div className="chat">
-            <Store>
+            <Store user={this.props.user}>
               <Dashboard />
             </Store>
           </div>
