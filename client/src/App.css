@@ -181,30 +181,6 @@ body{
     margin: auto;
     width: 100%;
   }
-/* Profile page */
-.profilePage {
-  color: white;
-  margin: 0 auto;
-  padding: 0;
-}
-.profileHeader {
-  margin-top: 25px;
-  text-align: center;
-}
-.profileTableHeader {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.profileUsernameDisplay,.profileBalanceDisplay {
-  font-weight: bold;
-}
-.profileBalanceDisplay {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.profileTable {
-  opacity: 0.9;
-}
 }
 @media only screen and (min-width: 768px) {
   .mainMatch {

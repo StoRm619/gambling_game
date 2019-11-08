@@ -19,44 +19,46 @@ background-image: url("https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4
 
 }
 #paperStyle{
-    background-color: #312e2e;
-    color: #ebebeb;
+    background-color: white;
+    margin: 0 auto;
+    color: black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 257px;
     border: solid;
     border-color: #7a747483;
-    width: 557px;
-
+    opacity: 0.8;
+    overflow-y: auto;
 }
 #TextField {
-    color: white
+    color: black;
+ }
+ .chatUser {
+    padding-right: 5px;
  }
 @media only screen and (min-width: 595px) {
 #paperStyle{
-    position: absolute;
-    bottom:-500px;
-    
+    position: relative;
+    top: -75px;
+    width: 100%;
 }
 }
-
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 768px) {
 #paperStyle{
-    position: absolute;
-    bottom: -500px;
+    width: 96%;
     }
     
-}
-@media only screen and (min-width: 1022px) {
+} 
+@media only screen and (min-width: 1024px) {
 #paperStyle{
+    width: 44%;
     position: absolute;
-    right: -20px;
-    top: -50px;
+    top: 0;
+    right: 2%;
+    height: 300px;
 }
 }
 @media only screen and (min-width: 1200px) {
 #paperStyle{
-    position: absolute;
-    right: 43px;
-    top: -50px;
+    width: 40%;
 }
 }

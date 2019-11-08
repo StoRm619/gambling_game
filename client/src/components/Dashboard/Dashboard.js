@@ -19,19 +19,17 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
   },
-  topicsWindow: {
-    width: "30%",
-    height: "300px",
-    borderRight: "1px solid gray"
-  },
   chatWindow: {
     width: "70%",
   },
   chatBox: {
-    width: "85%"
+    width: "85%",
   },
   button: {
     width: "15%"
+  },
+  chatUser: {
+    marginRight: "5px",
   }
 })
 );
@@ -50,10 +48,10 @@ export default function Dashboard() {
   return (
     <div>
       <Paper id="paperStyle" className={classes.root}>
-        <Typography variant="h4" component="h3">
+        {/* <Typography variant="h4" component="h3">
           Chat app.
         </Typography>
-        <Typography component="h5">{activeTopic}</Typography> 
+        <Typography component="h5">{activeTopic}</Typography>  */}
         <div className={classes.flex}>
           {/* <div className={classes.topicsWindow}>
             <List>
@@ -71,7 +69,7 @@ export default function Dashboard() {
           <div className={classes.chatWindow}>
             {allChats[activeTopic].map((chat, i) => (
               <div className={classes.flex} key={i} >
-                <Chip label={chat.from} />
+                <Chip label={chat.from} className={classes.chatUser}/>
                 <Typography className="chatText" variant="body1" gutterBottom>
                   {chat.msg}
                 </Typography>

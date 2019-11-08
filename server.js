@@ -43,7 +43,7 @@ app.post('/api/login', (req, res) => {
 });
 
 app.get('/api/livedata',(req, res) => {
-  axios.get("https://api.pandascore.co/matches?token=" + process.env.PANDASCORE_TOKEN)
+  axios.get("https://api.pandascore.co/csgo/matches?token=" + process.env.PANDASCORE_TOKEN)
     .then(response => res.json(response.data))
 
 });

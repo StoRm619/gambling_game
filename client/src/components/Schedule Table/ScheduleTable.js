@@ -10,12 +10,12 @@ class ScheduleTable extends Component {
     matches: []
   }
   componentDidMount() {
-    API.livedata().then(res => {
+    API.livedata(0).then(res => {
       this.setState({
-        teamAName: res.data[2].opponents[0].opponent.name,
-        teamBName: res.data[2].opponents[1].opponent.name,
-        matchTime: moment(res.data[2].scheduled_at).format('h:mm a'),
-        eventName: res.data[2].league.name
+        teamAName: res.data[0].opponents[0].opponent.name,
+        teamBName: res.data[0].opponents[1].opponent.name,
+        matchTime: moment(res.data[0].scheduled_at).format('h:mm a'),
+        eventName: res.data[0].league.name
       })
 
     })

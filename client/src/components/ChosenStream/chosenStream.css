@@ -21,6 +21,10 @@ background-color: rgb(211, 144, 20);
 color: black;
 
 }
+.chosenTwitchPlayer {
+    margin: 0 auto;
+    margin-top: 15px;
+}
 .detailBetContainer{
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -45,26 +49,23 @@ color: black;
 
 @media only screen and (min-width: 768px) {
     .chosenTwitchPlayer{
-                width: 90%;
-                height: 350px;
+                width: 96%;
+                height: 400px;
             }
 }
 @media only screen and (min-width: 1024px) {
     .chosenTwitchPlayer{
-                width: 45%;
-                height: 400px;
-                margin-left: 40px;
-                margin-top: 30px;
-            
+                width: 50%;
+                height: 400px; 
+                margin: 0;   
+                margin-left: 2%;
+                margin-top: 15px; 
             }
 }
 @media only screen and (min-width: 1200px) {
             .chosenTwitchPlayer{
-                width: 45%;
-                height: 400px;
-                margin-left: 40px;
-                margin-top: 30px;
-
+                width: 52%;
+                height: 450px;
             }
 
 }
