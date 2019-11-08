@@ -25,6 +25,7 @@ class MatchesBoard extends Component {
 
     
     render() {
+        let questionMark =  'https://img.icons8.com/nolan/64/000000/help--v2.png'
         return (
 
             <div className="matches">
@@ -43,8 +44,8 @@ class MatchesBoard extends Component {
                                 key={match.id}
                                 eventName={match.serie.full_name}
                                 scheduledAt={match.scheduled_at}
-                                teamALogo={match.opponents[0] && match.opponents[0].opponent.image_url}
-                                teamBLogo={match.opponents[1] && match.opponents[1].opponent.image_url}                           
+                                teamALogo={match.opponents[0] && match.opponents[0].opponent.image_url || questionMark} 
+                                teamBLogo={match.opponents[1] && match.opponents[1].opponent.image_url || questionMark}                           
                                 teamAName={match.opponents[0] && match.opponents[0].opponent.name}
                                 teamBName={match.opponents[1] && match.opponents[1].opponent.name}
                                 matchName={match.name}
