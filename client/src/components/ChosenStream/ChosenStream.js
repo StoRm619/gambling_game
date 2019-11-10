@@ -13,7 +13,9 @@ class ChosenStream extends Component {
         poolA: 0,
         userBetB: 0,
         poolB: 0,
-        poolTotal: 0
+        poolTotal: 0,
+        currentBet: "",
+        currentMatchup: "",
     };
     z
 

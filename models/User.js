@@ -37,6 +37,15 @@ const UserSchema = new Schema({
   userBetB: {
     type: Number,
     default: 0
+  },
+  currentBet: {
+    type: Number
+  },
+  currentMatchup: {
+    type: String
+  },
+  currentResult: {
+    type: String
   }
 });
 
