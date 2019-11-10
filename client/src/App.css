@@ -44,6 +44,8 @@ footer{
   background-color: #000000;
     height: 50px;
     margin-top: 40px;
+    position: fixed;
+  bottom: 0;
 }
 #matchNameCol{
   font-family: 'bigNoodleOb';

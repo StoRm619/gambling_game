@@ -36,9 +36,7 @@ class App extends Component {
         <div className="row">
             <ScheduleTable />
         </div>
-        <footer>
         
-        </footer>
       </div>
     );
   }

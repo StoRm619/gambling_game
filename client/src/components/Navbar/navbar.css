@@ -7,6 +7,15 @@
   font-family: 'bigNoodle';
   src: url(../../utils/Bignoodletitling-8ojz.ttf);
 }
+.underline{
+
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.underline:hover{
+  border: solid;
+  border-color: #fff;
+}
 #navColor{
     background: #000000;
     padding: 0;

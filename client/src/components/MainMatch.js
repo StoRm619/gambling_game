@@ -10,15 +10,15 @@ class MainMatch extends Component {
         API.livedata(0).then(res => {
             console.log(res.data)
             this.setState({
-              teamAName: res.data[0].opponents[0].opponent.name,
-              teamBName: res.data[0].opponents[1].opponent.name,
-              teamALogo: res.data[0].opponents[0].opponent.image_url,
-              teamBLogo: res.data[0].opponents[1].opponent.image_url,
+              // teamAName: res.data[0].opponents[0].opponent.name,
+              // teamBName: res.data[0].opponents[1].opponent.name,
+              // teamALogo: res.data[0].opponents[0].opponent.image_url,
+              // teamBLogo: res.data[0].opponents[1].opponent.image_url,
               gameNumber: res.data[0].number_of_games,
               matchName: res.data[0].name,
-              scoreA: res.data[0].results[0].score,
-              scoreB: res.data[0].results[1].score,
-              prizePool: res.data[0].tournament.prizepool
+              // scoreA: res.data[0].results[0].score,
+              // scoreB: res.data[0].results[1].score,
+              // prizePool: res.data[0].tournament.prizepool
             });
         }
         );

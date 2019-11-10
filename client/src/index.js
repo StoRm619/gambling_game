@@ -25,20 +25,19 @@ if(localStorage.getItem("id_token")) {
 }
 
 ReactDOM.render(
-    <Router>
+  <Router>
     <div>
-    <Navbar />
-            <Route exact path="/" component={App} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/admin" component={admin} />
-            <Route exact path="/addMoney" component={AddMoney} />
-            <Route exact path="/matchesBoard" component={withAuth(MatchesBoard)} />
-            <Route exact path="/matchDash" component={MatchDash} />
-
-
-        </div>
-    </Router>
-    , document.getElementById('root')
+      <Navbar />
+      <Route exact path="/" component={App} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/signup" component={Signup} />
+      <Route exact path="/admin" component={admin} />
+      <Route exact path="/addMoney" component={AddMoney} />
+      <Route exact path="/matchesBoard" component={withAuth(MatchesBoard)} />
+      <Route exact path="/matchDash" component={MatchDash} />
+    </div>
+    <footer></footer>
+  </Router>,
+  document.getElementById("root")
 );
 registerServiceWorker();
