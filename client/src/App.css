@@ -6,7 +6,14 @@
   font-family: 'coderoman';
   src: url(./utils/CodeNewRoman-aOAK.ttf);
 }
-
+@font-face {
+  font-family: 'bigNoodle';
+  src: url(./utils/CodeNewRomanItalic-6Xpo.ttf);
+}
+@font-face {
+  font-family: 'bigNoodleOb';
+  src: url(./utils/BignoodletitlingOblique-BxY5.ttf);
+}
 body{
   background-color: black;
   color: #ebebeb;
@@ -17,9 +24,50 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+th{
+  padding: 0;
+  font-family: 'bigNoodle';
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  vertical-align: middle;
+
+
+  
+}
+tr{
+  vertical-align: middle;
+  text-align: left;
+  line-height: 1;
+}
 footer{
-    background-color: rgb(3, 3, 36);
+  background-color: #000000;
     height: 50px;
+    margin-top: 40px;
+}
+#matchNameCol{
+  font-family: 'bigNoodleOb';
+  font-size: 1.3em;
+
+}
+#vs{
+    border-radius: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#vsMain{
+    margin: 5px;
+    border-radius: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#matchName{
+  font-family: 'PS';
+  font-size: 1.2em;
+}
+#prizePool{
+  font-family: 'coderoman';
+}
+#middleInfo{
+  width:400px;
 }
 .row {
   margin: 0;
@@ -117,16 +165,22 @@ footer{
 .mainMatchInfo {
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   height: 350px;
 }
 .mainGameInfo {
   padding-bottom: 10px;
-  background-image: url("https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f");
-  background-attachment: fixed;
+  padding-top:10px;
+  background-color: #19133583;
+  background-image: linear-gradient(to right, #991313b9 , #0c0363ab);
+  background-attachment: local;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: rgb(211, 144, 20);
+
 }
 
 .teamInfo {
@@ -145,24 +199,45 @@ footer{
   margin: 0 auto;
   margin-top: 5px;
   font-weight: bold;
-  color: #ebebeb;
+  text-shadow: 2px 2px 8px #000000;
 }
 .teamMiddle {
   padding: 0;
   margin: 0 auto;
   margin-top: 15px;
   font-weight: bold;
-  color: #ebebeb;
+  font-family: 'PS';
+  text-shadow: 2px 2px 8px #000000;
+  width: 140px;
 }
 .mainGameBet {
   margin-top: 10px;
+}
+#mainBetBtn{
+  padding: 4px 30px 4px 30px;
+  border-radius: 3px;
+  color: rgb(211, 144, 20);
+  text-shadow: 2px 2px 8px #ec0020;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 1.2em;
+  font-weight: bolder;
+  background-color: #000;
+  border: none;
+  
 }
 /* Home page - carousel */
 .carouselRow {
   margin-top: 30px;
 
 }
+.display-3{
+    text-shadow: 2px 2px 8px #000000;
+}
+.lead{
+    text-shadow: 2px 2px 8px #000000;
+}
 .carouselHeader {
+  letter-spacing: .6px;
   font-family: PS;
   margin: 0 auto;
   text-align: center;
@@ -172,6 +247,11 @@ footer{
   background-color: rgb(211, 144, 20);
   color: black;
   font-weight: bold;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 8px #000000;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
 }
 
 @media only screen and (min-width: 595px) {

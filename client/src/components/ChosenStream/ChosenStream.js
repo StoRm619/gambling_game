@@ -77,59 +77,63 @@ class ChosenStream extends Component {
     };
     render() {
         return (
-            <div className="chosenTwitchPlayer">
-                <iframe
-                    src="https://player.twitch.tv/?channel=summit1g&muted=true&autoplay=false"
-                    height="100%"
-                    width="100%"
-                    frameBorder="0"
-                    title="mainTwitch"
-                    scrolling="no"
-                >
-                </iframe>
-                <div className="streamDetails">
-                    <div className="detailBetContainer">
-
-                            <div className="currentBal">
-                                <p>Chronos balance:</p>
-                                <p>${this.state.chronos ? this.state.chronos : "00.00"}</p>
-                            </div>
-                            <h6>Event Name</h6>
-                            <form
-                                onSubmit={this.handleFormSubmit}
-                                className="addMoneyForm col-sm-11 col-md-5"
-                            >
-                                <label>{this.state.teamAName}</label>
-                                <input type="radio" name="chooseTeam" value="TeamA" />
-                                <br />
-                                <label>{this.state.teamBName}</label>
-                                <input type="radio" name="chooseTeam" value="TeamB" />
-                                <div className="form-group row col-sm-12">
-                                    <label htmlFor="depositedMoney">Place your bet </label>
-                                    <input
-                                        type="text"
-                                        value={this.state.value}
-                                        className="form-control"
-                                        id="betMoney"
-                                        placeholder="Amount to bet"
-                                        onChange={this.handleInputChange}
-                                    />
-                                </div>
-                                <div className="form-group row">
-                                    <div className="col-sm-12">
-                                        <div className="row">
-                                            <button
-                                                type="submit"
-                                                className="btn btn-primary placeBetMoney">Bet</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-
-                    </div>
+          <div className="chosenTwitchPlayer">
+            <iframe
+              src="https://player.twitch.tv/?channel=summit1g&muted=true&autoplay=false"
+              height="100%"
+              width="100%"
+              frameBorder="0"
+              title="mainTwitch"
+              scrolling="no"
+            ></iframe>
+            <div className="streamDetails">
+              <div className="detailBetContainer">
+                <div className="currentBal">
+                  <p>Chronos balance:</p>
+                  <p>${this.state.chronos ? this.state.chronos : "00.00"}</p>
                 </div>
+                <h6>Event Name</h6>
+                <form
+                  onSubmit={this.handleFormSubmit}
+                  className="addMoneyForm col-sm-11 col-md-5"
+                >
+                  <label>
+                    {this.state.teamAName ? this.state.teamAName : "TBD"}
+                  </label>
+                  <input type="radio" name="chooseTeam" value="TeamA" />
+                  <br />
+                  <label>
+                    {this.state.teamBName ? this.state.teamBName : "TBD"}
+                  </label>
+                  <input type="radio" name="chooseTeam" value="TeamB" />
+                  <div className="form-group row col-sm-12">
+                    <label htmlFor="depositedMoney">Place your bet </label>
+                    <input
+                      type="text"
+                      value={this.state.value}
+                      className="form-control"
+                      id="betMoney"
+                      placeholder="Amount to bet"
+                      onChange={this.handleInputChange}
+                    />
+                  </div>
+                  <div className="form-group row">
+                    <div className="col-sm-12">
+                      <div className="row">
+                        <button
+                          type="submit"
+                          className="btn btn-primary placeBetMoney"
+                        >
+                          Bet
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-        )
+          </div>
+        );
     }
 }
 

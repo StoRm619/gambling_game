@@ -26,7 +26,7 @@ class App extends Component {
 
         <div className="row carouselRow">
           <div className="col-sm-10 col-md-6 carouselHeader">
-            Other ongoing matches: 
+            Other Live Matches
           </div>
         </div>
         <div className="row">

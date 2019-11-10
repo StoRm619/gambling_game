@@ -45,20 +45,36 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark" id="navColor">
-                <div className="container" id="nav-container">
-                    <Link className="navbar-brand" to="/">Gambling Game</Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav mr-auto">
-                        </ul>
-                        {this.showNavigation()}
-                    </div>
-                </div>
-            </nav>
-        )
+          <nav className="navbar navbar-expand-lg navbar-dark" id="navColor">
+            <div className="container" id="nav-container">
+              <Link className="navbar-brand" to="/">
+                <img
+                  src="https://cybertelds.com/wp-content/uploads/2017/11/cropped-favicon.png"
+                  alt="logo"
+                  width="50"
+                  height="40"
+                  className="logo"
+                ></img>
+                Gambling Game
+              </Link>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav mr-auto"></ul>
+                {this.showNavigation()}
+              </div>
+            </div>
+          </nav>
+        );
     }
 }
 
