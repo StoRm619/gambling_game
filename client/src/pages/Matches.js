@@ -5,6 +5,7 @@ import Wrapper from '../components/Wrapper'
 import { Jumbotron, Container } from 'reactstrap';
 import API from "../utils/API.js";
 import './css/matches.css';
+var moment = require('moment')
 
 class MatchesBoard extends Component {
     state = {
@@ -43,12 +44,12 @@ class MatchesBoard extends Component {
                             <MatchCard
                                 key={match.id}
                                 eventName={match.serie.full_name}
-                                scheduledAt={match.scheduled_at}
-                                teamALogo={match.opponents[0] && match.opponents[0].opponent.image_url || questionMark} 
-                                teamBLogo={match.opponents[1] && match.opponents[1].opponent.image_url || questionMark}                           
-                                teamAName={match.opponents[0] && match.opponents[0].opponent.name}
-                                teamBName={match.opponents[1] && match.opponents[1].opponent.name}
-                                matchName={match.name}
+                                scheduledAt={moment(match.scheduled_at).format('h:mm a') || 'TBD'}
+                                teamALogo={match.opponents[0].opponent.image_url || questionMark} 
+                                teamBLogo={match.opponents[1].opponent.image_url || questionMark}                           
+                                teamAName={match.opponents[0].opponent.name || 'TBD'}
+                                teamBName={match.opponents[1].opponent.name || 'TBD'}
+                                matchName={match.name || 'TBD'}
                                 />
 
                         ))}
