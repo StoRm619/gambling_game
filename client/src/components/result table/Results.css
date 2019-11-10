@@ -1,7 +1,71 @@
-.resultsTable {
-    border-color: #46474da8;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    background-color: rgb(3, 3, 36);
+@font-face {
+  font-family: 'PS';
+  src: url(../../utils/GamestationDisplayObl.otf);
+}
+@font-face {
+  font-family: 'coderoman';
+  src: url(../../utils/CodeNewRoman-aOAK.ttf);
+}
+.results {
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  
+}
+.resultsStyle{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 0px;
+  padding: 0px;
+  border-radius: 8px;
+  
+}
+.resultsHeader {
+    text-shadow: 2px 2px 8px #000000;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    background-color: rgb(211, 144, 20);
+    color: black;
+    font-weight: bold;
+    font-family: PS;
+    font-size: 1.5em;
+    letter-spacing: .6px;
+
+  }
+  .resultsTable {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-image: url('../../utils/blue.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'coderoman';
+  
+  }
+  @media only screen and (min-width: 300px) {
+    .results {
+      width: 97%;
+    }
+  }
+  @media only screen and (min-width: 760px) {
+    .results {
+      position: absolute;
+      top: 1013px;
+      right: 41px;
+      width: 287px;
+    }
+  }
+
+  @media only screen and (min-width: 824px) {
+    .results {
+      position: absolute;
+      top: 886px;
+      right: 41px;
+      width: 39%;
+
+    }
   }

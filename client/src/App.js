@@ -36,8 +36,10 @@ class App extends Component {
 
         <div className="row">
             <ScheduleTable />
-        <Results />
-        
+
+            
+            <Results />
+            </div>
       </div>
     );
   }

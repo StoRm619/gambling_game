@@ -38,40 +38,61 @@ class Signup extends Component {
           <h1 className="signUpHeader">User sign up</h1>
         </div>
         <div className="row">
-          <form onSubmit={this.handleFormSubmit} className="col-sm-10 col-md-6 signUpForm">
+          <form
+            onSubmit={this.handleFormSubmit}
+            className="col-sm-10 col-md-6 signUpForm"
+          >
             <div className="form-group row">
-              <label htmlFor="username" className="formLabel">Username:</label>
-              <input className="form-control"
+              <label htmlFor="username" className="formLabel">
+                Username:
+              </label>
+              <input
+                className="form-control"
                 placeholder="Username goes here..."
                 name="username"
                 type="text"
                 id="username"
                 autoComplete="username"
-                onChange={this.handleChange} />
+                onChange={this.handleChange}
+              />
             </div>
             <div className="form-group row">
-              <label htmlFor="email" className="formLabel">Email address:</label>
-              <input className="form-control"
+              <label htmlFor="email" className="formLabel">
+                Email address:
+              </label>
+              <input
+                className="form-control"
                 placeholder="Email goes here..."
                 name="email"
                 type="email"
                 id="email"
                 autoComplete="email"
-                onChange={this.handleChange} />
+                onChange={this.handleChange}
+              />
             </div>
             <div className="form-group row">
-              <label htmlFor="pwd" className="formLabel">Password:</label>
-              <input className="form-control"
+              <label htmlFor="pwd" className="formLabel">
+                Password:
+              </label>
+              <input
+                className="form-control"
                 placeholder="Password goes here..."
                 name="password"
                 type="password"
                 id="pwd"
                 autoComplete="new-password"
-                onChange={this.handleChange} />
+                onChange={this.handleChange}
+              />
             </div>
             <div className="row">
-              <p className="col-sm-9 col-md-10 formLink"><Link to="/login">Already have an account?</Link></p>
-              <button type="submit" className="btn btn-primary signUpSubmit">Sign up</button>
+              <p className="col-sm-9 col-md-10 formLink">
+                <Link to="/login" id="noAcctMessage">
+                  Already have an account?
+                </Link>
+              </p>
+              <button type="submit" className="btn signUpSubmit">
+                Sign up
+              </button>
             </div>
           </form>
         </div>

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import API from "../utils/API.js";
 
 class MainMatch extends Component {
@@ -72,7 +74,9 @@ class MainMatch extends Component {
                 </div>
 
                 <div className="row mx-auto mainGameBet" style={{ width: 65 }}>
-                  <button id="mainBetBtn">Bet</button>
+                  <Link id="mainBetBtn" to="/matchDash" className="btn">
+                    Bet
+                  </Link>
                 </div>
               </div>
               <div className="teamInfo col-sm-5 col-md-5">

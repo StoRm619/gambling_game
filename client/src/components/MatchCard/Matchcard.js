@@ -12,7 +12,6 @@ function Matchcard (props){
                 className="active"
                 to={{
                   pathname: "/matchDash",
-                  data: props // your data array of objects
                 }}
               >
                 <CardImg
