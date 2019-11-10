@@ -44,12 +44,12 @@ class MatchesBoard extends Component {
                             <MatchCard
                                 key={match.id}
                                 eventName={match.serie.full_name}
-                                scheduledAt={moment(match.scheduled_at).format('h:mm a')}
-                                teamALogo={match.opponents[0] ? match.opponents[0].opponent.image_url : questionMark} 
-                                teamBLogo={match.opponents[1] ? match.opponents[1].opponent.image_url : questionMark}                           
-                                teamAName={match.opponents[0] && match.opponents[0].opponent.name}
-                                teamBName={match.opponents[1] && match.opponents[1].opponent.name}
-                                matchName={match.name}
+                                scheduledAt={moment(match.scheduled_at).format('h:mm a') || 'TBD'}
+                                teamALogo={match.opponents[0].opponent.image_url || questionMark} 
+                                teamBLogo={match.opponents[1].opponent.image_url || questionMark}                           
+                                teamAName={match.opponents[0].opponent.name || 'TBD'}
+                                teamBName={match.opponents[1].opponent.name || 'TBD'}
+                                matchName={match.name || 'TBD'}
                                 />
 
                         ))}

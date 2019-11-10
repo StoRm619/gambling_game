@@ -20,27 +20,16 @@ export default {
     return axios.get("/api/livedata5")
   },
   updateUser: (username, chronos, userBetA) => {
-    return axios.put("/api/update", {
-      username: username,
-      chronos: chronos,
-      userBetA: userBetA
-    });
+    return axios.put('/api/update', { username: username, chronos: chronos, userBetA: userBetA})
   },
   updateUserB: (username, chronos, userBetB) => {
-    return axios.put("/api/updateB", {
-      username: username,
-      chronos: chronos,
-      userBetB: userBetB
-    });
+    return axios.put('/api/updateB', { username: username, chronos: chronos, userBetB: userBetB})
   },
   getAllUsers: () => {
     return axios.get("/api/allUsers");
   },
-  payWinners: (username, chronos) => {
-    return axios.put("/api/payWinners", {
-      username: username,
-      chronos: chronos
-    });
+  payWinners: (username, chronos, currentBet, currentMatchup, currentResult) => {
+    return axios.put('/api/payWinners', { username: username, chronos: chronos, currentBet: currentBet, currentMatchup: currentMatchup, currentResult:currentResult})
   }
 };
 
