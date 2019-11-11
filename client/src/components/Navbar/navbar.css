@@ -7,9 +7,28 @@
   font-family: 'bigNoodle';
   src: url(../../utils/Bignoodletitling-8ojz.ttf);
 }
+.underline{
+
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.underline:hover{
+  border-bottom: solid;
+  border-top: solid;
+  border-color: #fff;
+}
+.underline:active{
+  border-bottom: solid;
+  border-top: solid;
+  border-color: rgb(44, 4, 71);
+}
 #navColor{
-    background: none;
+    background: #000000;
     padding: 0;
+}
+.logo{
+  padding-right: 5px;
+  margin-bottom:8px;
 }
 .navbar-brand{
     font-family: 'HACKED';

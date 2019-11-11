@@ -36,14 +36,14 @@ class Login extends Component {
       return <Redirect to="/" />
     }
     return (
-      <div className="container">
+      <div className="container login">
         <div className="row">
           <h1 className="logInHeader">Login</h1>
         </div>
         <div className="row">
-          <form onSubmit={this.handleFormSubmit} className="col-sm-10  col-md-6 logInForm">
+          <form onSubmit={this.handleFormSubmit} className="col-sm-10  col-md-12 logInForm">
             <div className="form-group row">
-              <label htmlFor="username" className="formLabel">Username:</label>
+              <label htmlFor="username" className="formLabel username">Username:</label>
               <input className="form-control"
                 placeholder="Username goes here..."
                 name="username"
@@ -53,7 +53,7 @@ class Login extends Component {
                 onChange={this.handleChange} />
             </div>
             <div className="form-group row">
-              <label htmlFor="pwd" className="formLabel">Password:</label>
+              <label htmlFor="pwd" className="formLabel password">Password:</label>
               <input className="form-control"
                 placeholder="Password goes here..."
                 name="password"
@@ -63,8 +63,8 @@ class Login extends Component {
                 onChange={this.handleChange} />
             </div>
             <div className="row">
-              <p className="col-sm-9 col-md-10 formLink"><Link to="/signup">Dont' have an account?</Link></p>
-              <button type="submit" className="btn btn-primary logInSubmit">Log in</button>
+              <p className="col-sm-9 col-md-10 formLink"><Link to="/signup" id="acctMessage">Dont' have an account?</Link></p>
+              <button type="submit" className="btn logInSubmit">Log in</button>
             </div>
           </form>
         </div>

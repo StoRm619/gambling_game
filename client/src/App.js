@@ -4,6 +4,7 @@ import withAuth from './components/withAuth';
 import MainMatch from './components/MainMatch';
 import ScheduleTable from './components/Schedule Table/ScheduleTable';
 import Carousel from './components/Carousel/Carousel';
+import Results from './components/result table/Results'
 import './App.css';
 
 
@@ -26,7 +27,7 @@ class App extends Component {
 
         <div className="row carouselRow">
           <div className="col-sm-10 col-md-6 carouselHeader">
-            Other ongoing matches: 
+            Other Live Matches
           </div>
         </div>
         <div className="row">
@@ -35,10 +36,10 @@ class App extends Component {
 
         <div className="row">
             <ScheduleTable />
-        </div>
-        <footer>
-        
-        </footer>
+
+            
+            <Results />
+            </div>
       </div>
     );
   }

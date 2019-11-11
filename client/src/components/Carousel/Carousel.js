@@ -11,7 +11,7 @@ function Carousel() {
                     <div className="row">
                         <div className="col-sm-6 carouselPic ">
                             <iframe
-                                src="https://player.twitch.tv/?channel=summit1g&muted=true&autoplay=false"
+                                src="https://player.twitch.tv/?channel=twitchpresents&muted=true&autoplay=false"
                                 height="100%"
                                 width="100%"
                                 frameBorder="0"
@@ -41,7 +41,7 @@ function Carousel() {
                     <div className="row">
                         <div className="col-sm-6 carouselPic ">
                             <iframe
-                                src="https://player.twitch.tv/?channel=summit1g&muted=true&autoplay=false"
+                                src="https://player.twitch.tv/?channel=timthetatman&muted=true&autoplay=false"
                                 height="100%"
                                 width="100%"
                                 frameBorder="0"
@@ -70,7 +70,7 @@ function Carousel() {
                     <div className="row">
                         <div className="col-sm-6 carouselPic ">
                             <iframe
-                                src="https://player.twitch.tv/?channel=summit1g&muted=true&autoplay=false"
+                                src="https://player.twitch.tv/?channel=drdisrespect&muted=true&autoplay=false"
                                 height="100%"
                                 width="100%"
                                 frameBorder="0"

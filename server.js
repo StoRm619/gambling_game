@@ -43,7 +43,13 @@ app.post('/api/login', (req, res) => {
 });
 
 app.get('/api/livedata',(req, res) => {
-  axios.get("https://api.pandascore.co/csgo/matches?token=" + process.env.PANDASCORE_TOKEN)
+  axios.get("https://api.pandascore.co/csgo/matches?token=" + process.env.PANDASCORE_TOKEN + "&per_page=10")
+    .then(response => res.json(response.data))
+
+});
+
+app.get('/api/livedata5',(req, res) => {
+  axios.get("https://api.pandascore.co/csgo/matches?token=" + process.env.PANDASCORE_TOKEN + "&per_page=6")
     .then(response => res.json(response.data))
 
 });
@@ -62,20 +68,20 @@ app.get('/api/allUsers', (req, res) => {
 })
 
 app.put('/api/update', (req, res) => {
-  db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, userBetA: req.body.userBetA } })
+  db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, userBetA: req.body.userBetA} })
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
 })
 
 app.put('/api/updateB', (req, res) => {
-  db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, userBetB: req.body.userBetB } })
+  db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, userBetB: req.body.userBetB} })
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
 })
 
 app.put('/api/payWinners', (req, res) => {
   //at each user in loop add chronos, and reset bets for next round
-  db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, userBetA: 0 , userBetB: 0} })
+  db.User.update({ username: req.body.username }, { $set: { chronos: req.body.chronos, currentBet: req.body.currentBet, currentMatchup: req.body.currentMatchup, currentResult: req.body.currentResult, userBetA: 0 , userBetB: 0} })
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
 })

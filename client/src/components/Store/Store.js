@@ -1,6 +1,7 @@
 import React from "react";
 import io from "socket.io-client"
 
+
 export const CTX = React.createContext();
 
 const initState = {
@@ -8,7 +9,8 @@ const initState = {
         
             {from: "rafa", msg: "hello"}
         
-    ]
+    ],
+    username:""
 }
 
 function reducer(state, action) {
@@ -41,7 +43,9 @@ function sendChatAction(value) {
 export default function Store(props) {
 
     const [allChats, dispatch] = React.useReducer(reducer, initState);
-    
+
+        //console.log(props.user.username)
+   
     if(!socket) {
         socket= io()
         socket.on('chat message', function(msg){
@@ -49,8 +53,8 @@ export default function Store(props) {
           });
     }
 
-    //const user = "rafa" + Math.random(100).toFixed(2)
-    const user = 'test'
+    // const user = "rafa" + Math.random(100).toFixed(2)
+    const user = props.user.username;
 
 
     return (

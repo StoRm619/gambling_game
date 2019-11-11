@@ -9,6 +9,7 @@ import '../pages/css/matchBoard.css';
 import API from './../utils/API';
 var moment = require('moment');
 
+
 const data = {
   eventName: "Mdl europe season 32 2019",
   scheduledAt: "2019-11-07T15:00:00Z",
@@ -19,7 +20,9 @@ const data = {
   teamBName: "Movistar Riders"
 };
 
-
+//  function retrieveStorage() { JSON.parse(localStorage.getItem("matchID")),
+//     this.setState({ matchID: "matchID" });
+//     console.log(matchID)};
 class MatchDash extends Component {
   state = {
     username: "",
@@ -31,10 +34,11 @@ class MatchDash extends Component {
     userBetB: 0,
     poolB: 0,
     poolTotal: 0,
-    curTime: moment().format('h:mm a')
+    curTime: moment().format('h:mm a'),
   };
 
   componentDidMount() {
+
     API.getAllUsers().then(res => {
       for (let i = 0; i < res.data.length; i++) {
         this.setState({
@@ -57,37 +61,36 @@ class MatchDash extends Component {
   }
 
   render() {
-    // const { data } = this.props.location;
-    // console.log(JSON.stringify(data))
-    return (
-      <div className="matchDash">
-        <div>
-          <Jumbotron fluid>
-            <Container fluid>
-              <h1 className="display-3">{data.eventName}</h1>
-              <p className="lead">
-                <strong>
-                  {data.teamAName} | VS | {data.teamBName}
-                </strong>
-              </p>
-            </Container>
-          </Jumbotron>
-        </div>
-        <div className="dashboardPosition">
-          <div className="chosenTeamDetails"></div>
-          <ChosenStream />
-          <BetTable />
-          <div className="chat">
-            <Store>
-              <Dashboard />
-            </Store>
+
+      return (
+        <div className="matchDash">
+          <div>
+            <Jumbotron fluid>
+              <Container fluid>
+                <h1 className="display-3">{data.eventName}</h1>
+                <p className="lead">
+                  <strong>
+                    {data.teamAName} | VS | {data.teamBName}
+                  </strong>
+                </p>
+              </Container>
+            </Jumbotron>
+          </div>
+          <div className="dashboardPosition">
+            <div className="chosenTeamDetails"></div>
+            <ChosenStream />
+            <BetTable />
+            <div className="chat">
+              <Store user={this.props.user}>
+                <Dashboard />
+              </Store>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
 
-  };
+    };
 
-}
+  }
 
-export default withAuth(MatchDash);
+  export default withAuth(MatchDash);

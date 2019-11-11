@@ -5,6 +5,7 @@ import Wrapper from '../components/Wrapper'
 import { Jumbotron, Container } from 'reactstrap';
 import API from "../utils/API.js";
 import './css/matches.css';
+var moment = require('moment');
 
 class MatchesBoard extends Component {
     state = {
@@ -18,13 +19,14 @@ class MatchesBoard extends Component {
             console.log(res.data)
             this.setState({
                 matches: res.data,
-            }, () => console.log(this.state.matches))
+            })
         })
     }
 
 
     
     render() {
+        let questionMark =  'https://img.icons8.com/nolan/64/000000/help--v2.png'
         return (
 
             <div className="matches">
@@ -32,7 +34,7 @@ class MatchesBoard extends Component {
                     <Jumbotron fluid>
                         <Container fluid>
                             <h1 className="display-3">Scheduled Matches</h1>
-                            <p className="lead"><strong>This is where all of the matches are going to show up, bet on or not.</strong></p>
+                            <p className="lead"><strong>Browse the Weekly Tournament Schedules Below</strong></p>
                         </Container>
                     </Jumbotron>
                 </div>
@@ -42,19 +44,20 @@ class MatchesBoard extends Component {
                             <MatchCard
                                 key={match.id}
                                 eventName={match.serie.full_name}
-                                scheduledAt={match.scheduled_at}
-                                teamALogo={match.opponents[0] && match.opponents[0].opponent.image_url}
-                                teamBLogo={match.opponents[1] && match.opponents[1].opponent.image_url}                           
-                                teamAName={match.opponents[0] && match.opponents[0].opponent.name}
-                                teamBName={match.opponents[1] && match.opponents[1].opponent.name}
-                                matchName={match.name}
+                                scheduledAt={moment(match.scheduled_at).format('h:mm a') || 'TBD'}
+                                teamALogo={match.opponents[0].opponent.image_url || questionMark} 
+                                teamBLogo={match.opponents[1].opponent.image_url || questionMark}                           
+                                teamAName={match.opponents[0].opponent.name || 'TBD'}
+                                teamBName={match.opponents[1].opponent.name || 'TBD'}
+                                matchName={match.name || 'TBD'}
                                 />
 
                         ))}
                     </Wrapper>
                 </div>
             </div>
-        )
+          
+        );
 
     };
 
