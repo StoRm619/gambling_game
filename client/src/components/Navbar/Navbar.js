@@ -28,14 +28,18 @@ class Navbar extends Component {
         }
         else {
             return (
-                <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="/signup">Signup</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="/login">Login</Link>
-                    </li>
-                </ul>
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link className="nav-link underline" to="/signup">
+                    Signup
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link underline" to="/login">
+                    Login
+                  </Link>
+                </li>
+              </ul>
             );
         }
     };

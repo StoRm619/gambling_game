@@ -15,7 +15,7 @@ opacity: 50%;
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 50%;
-}
+} 
 .underline:hover{
   border: none;
   box-shadow: 4px 0 8px 0 rgba(131, 10, 131, 0.521);
