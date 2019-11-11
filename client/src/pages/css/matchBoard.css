@@ -34,6 +34,7 @@
 }
 #TextField {
     color: black;
+    margin-bottom: 20px;
  }
  .chatUser {
     padding-right: 5px;
