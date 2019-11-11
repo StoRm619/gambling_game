@@ -14,20 +14,19 @@ opacity: 50%;
 
   padding-left: 50px;
   padding-right: 50px;
-  border-radius: 5px;
-}
+  border-radius: 50%;
+} 
 .underline:hover{
-  border-bottom: solid;
-  border-top: solid;
-  border-color: rgb(56, 0, 109);
-  box-shadow: 0 4px 8px 0 rgba(165, 0, 165, 0.521), 0 6px 20px 0 rgba(165, 0, 165, 0.521);
+  border: none;
+  box-shadow: 4px 0 8px 0 rgba(131, 10, 131, 0.521);
+  text-shadow: 2px 2px 8px #b4b0b0;
 
 }
 .underline:active{
   border-bottom: solid;
   border-top: solid;
   border-color: rgb(44, 4, 71);
-  box-shadow: 0 4px 8px 0 rgba(165, 0, 165, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(165, 0, 165, 0.2);
 
 }
 #navColor{

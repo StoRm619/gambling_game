@@ -40,6 +40,9 @@ tr {
   text-align: left;
   line-height: .9;
 }
+tr:hover {
+  opacity: .8;
+}
 #matchNameCol {
   font-family: "bigNoodleOb";
   font-size: 1.3em;
