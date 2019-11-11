@@ -20,7 +20,7 @@ opacity: 50%;
   border-bottom: solid;
   border-top: solid;
   border-color: rgb(56, 0, 109);
-  box-shadow: 0 4px 8px 0 rgba(165, 0, 165, 0.521), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(165, 0, 165, 0.521), 0 6px 20px 0 rgba(165, 0, 165, 0.521);
 
 }
 .underline:active{
