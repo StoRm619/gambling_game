@@ -35,7 +35,7 @@ ReactDOM.render(
       <Route exact path="/matchesBoard" component={withAuth(MatchesBoard)} />
       <Route exact path="/matchDash" component={MatchDash} />
     </div>
-    <footer>
+    <footer className="sticky-bottom">
       <Link to="https://github.com/StoRm619/gambling_game">
         | Github Repo 
       </Link>

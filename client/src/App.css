@@ -295,16 +295,16 @@ tr {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-.pagePosition {
-  position: relative;
-}
 footer{
+  position: fixed;
   background: black;
   color: white;
   bottom: 0;
   height: 50px;
   text-align: center;
-  padding-top: 10px
+  padding-top: 10px;
+  width: 100%;
+  margin-top: 30px;
 }
 @media only screen and (min-width: 595px) {
   .matchesBox {
