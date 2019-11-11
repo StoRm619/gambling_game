@@ -1,15 +1,20 @@
 import axios from 'axios';
+
 export default {
   // Gets a single user by id
-  getUser: (id) => {
+  getUser: id => {
     return axios.get(`/api/user/${id}`);
   },
   // sign up a user to our service
   signUpUser: (username, email, password) => {
-    return axios.post('api/signup', { username: username, email: email, password: password });
+    return axios.post("api/signup", {
+      username: username,
+      email: email,
+      password: password
+    });
   },
   livedata: () => {
-    return axios.get("/api/livedata")
+    return axios.get("/api/livedata");
   },
   livedata5: () => {
     return axios.get("/api/livedata5")
@@ -21,13 +26,10 @@ export default {
     return axios.put('/api/updateB', { username: username, chronos: chronos, userBetB: userBetB})
   },
   getAllUsers: () => {
-    return axios.get('/api/allUsers')
-  },
-  currentmatchdata: (id) => {
-    return axios.get(`https://api.pandascore.co/csgo/matches${id}?token`)
+    return axios.get("/api/allUsers");
   },
   payWinners: (username, chronos, currentBet, currentMatchup, currentResult) => {
     return axios.put('/api/payWinners', { username: username, chronos: chronos, currentBet: currentBet, currentMatchup: currentMatchup, currentResult:currentResult})
   }
-}
+};
 

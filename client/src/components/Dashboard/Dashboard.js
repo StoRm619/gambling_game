@@ -13,7 +13,8 @@ import { CTX } from "../Store/Store.js";
 const useStyles = makeStyles(theme => ({
   root: {
     margin: "50px",
-    padding: theme.spacing(3, 2)
+    padding: theme.spacing(3, 2),
+    color: "white"
   },
   flex: {
     display: "flex",
@@ -23,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     width: "70%"
   },
   chatBox: {
-    width: "85%"
+    width: "85%",
   },
   button: {
     width: "15%"
@@ -78,6 +79,7 @@ export default function Dashboard() {
 
         <div className={classes.flex}>
           <TextField
+            id="chat"
             className={classes.chatBox}
             label="Send a chat"
             value={textValue}

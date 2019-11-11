@@ -5,7 +5,7 @@ import Wrapper from '../components/Wrapper'
 import { Jumbotron, Container } from 'reactstrap';
 import API from "../utils/API.js";
 import './css/matches.css';
-var moment = require('moment')
+var moment = require('moment');
 
 class MatchesBoard extends Component {
     state = {
@@ -19,7 +19,7 @@ class MatchesBoard extends Component {
             console.log(res.data)
             this.setState({
                 matches: res.data,
-            }, () => console.log(this.state.matches))
+            })
         })
     }
 
@@ -34,7 +34,7 @@ class MatchesBoard extends Component {
                     <Jumbotron fluid>
                         <Container fluid>
                             <h1 className="display-3">Scheduled Matches</h1>
-                            <p className="lead"><strong>This is where all of the matches are going to show up, bet on or not.</strong></p>
+                            <p className="lead"><strong>Browse the Weekly Tournament Schedules Below</strong></p>
                         </Container>
                     </Jumbotron>
                 </div>
@@ -56,7 +56,8 @@ class MatchesBoard extends Component {
                     </Wrapper>
                 </div>
             </div>
-        )
+          
+        );
 
     };
 

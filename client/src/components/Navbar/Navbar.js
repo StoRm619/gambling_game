@@ -14,17 +14,14 @@ class Navbar extends Component {
             return (
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/addMoney">Add Money</Link>
+                        <Link className="nav-link link underline" to="/addMoney">Add Money</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/matchesBoard">Current Matches</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="/matchDash">Match DashBoard</Link>
+                        <Link className="nav-link link underline" to="/matchesBoard">Current Matches</Link>
                     </li>
                     <li className="nav-item">
                         {/* this is not using the Link component to logout or user and then refresh the application to the start */}
-                        <a className="nav-link active" href="/" onClick={() => this.Auth.logout()}>Logout</a>
+                        <a className="nav-link link underline" href="/" onClick={() => this.Auth.logout()}>Logout</a>
                     </li>
                 </ul>
             );
@@ -45,20 +42,36 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark" id="navColor">
-                <div className="container" id="nav-container">
-                    <Link className="navbar-brand" to="/">Gambling Game</Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav mr-auto">
-                        </ul>
-                        {this.showNavigation()}
-                    </div>
-                </div>
-            </nav>
-        )
+          <nav className="navbar sticky-top navbar-expand-lg navbar-dark" id="navColor">
+            <div className="container" id="nav-container">
+              <Link className="navbar-brand" to="/">
+                <img
+                  src="https://cybertelds.com/wp-content/uploads/2017/11/cropped-favicon.png"
+                  alt="logo"
+                  width="50"
+                  height="40"
+                  className="logo"
+                ></img>
+                Gambling Game
+              </Link>
+              <button
+                className="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav mr-auto"></ul>
+                {this.showNavigation()}
+              </div>
+            </div>
+          </nav>
+        );
     }
 }
 

@@ -20,7 +20,9 @@ const data = {
   teamBName: "Movistar Riders"
 };
 
-
+//  function retrieveStorage() { JSON.parse(localStorage.getItem("matchID")),
+//     this.setState({ matchID: "matchID" });
+//     console.log(matchID)};
 class MatchDash extends Component {
   state = {
     username: "",
@@ -32,10 +34,11 @@ class MatchDash extends Component {
     userBetB: 0,
     poolB: 0,
     poolTotal: 0,
-    curTime: moment().format('h:mm a')
+    curTime: moment().format('h:mm a'),
   };
 
   componentDidMount() {
+
     API.getAllUsers().then(res => {
       for (let i = 0; i < res.data.length; i++) {
         this.setState({
@@ -58,8 +61,7 @@ class MatchDash extends Component {
   }
 
   render() {
-      // const { data } = this.props.location;
-      // console.log(JSON.stringify(data))
+
       return (
         <div className="matchDash">
           <div>
