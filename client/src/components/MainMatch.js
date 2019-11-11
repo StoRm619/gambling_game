@@ -74,8 +74,14 @@ class MainMatch extends Component {
                 </div>
 
                 <div className="row mx-auto mainGameBet" style={{ width: 65 }}>
-                  <Link id="mainBetBtn" to="/matchDash" className="btn">
-                    BET
+                  <Link to="/matchDash">
+                    <button
+                      type="submit"
+                      id="mainBetBtn"
+                      className="btn"
+                    >
+                      BET
+                    </button>
                   </Link>
                 </div>
               </div>
