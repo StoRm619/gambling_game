@@ -38,7 +38,7 @@ th {
 tr {
   vertical-align: middle;
   text-align: left;
-  line-height: 1;
+  line-height: .9;
 }
 #matchNameCol {
   font-family: "bigNoodleOb";
@@ -298,16 +298,14 @@ tr {
 .pagePosition {
   position: relative;
 }
-.footer {
-  background-color: #000000;
-  height: 80px;
-  margin-top: 40px;
-  position: absolute;
+footer{
+  background: black;
+  color: white;
   bottom: 0;
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 50px;
+  text-align: center;
+  padding-top: 10px
 }
-
 @media only screen and (min-width: 595px) {
   .matchesBox {
     width: 100%;
@@ -330,6 +328,9 @@ tr {
   .carouselHeader {
     margin: 0;
     margin-left: 40px;
+  }
+  .carousel{
+    margin-bottom: 100px;
   }
   .addMoneyPageHeader {
     margin: 0;
