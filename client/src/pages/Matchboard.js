@@ -10,15 +10,15 @@ import API from './../utils/API';
 var moment = require('moment');
 
 
-const data = {
-  eventName: "Mdl europe season 32 2019",
-  scheduledAt: "2019-11-07T15:00:00Z",
-  teamALogo:
-    "https://cdn.pandascore.co/images/team/image/3288/600px_virtus.pro_2019.png",
-  teamBLogo: "https://cdn.pandascore.co/images/team/image/125785/7718.png",
-  teamAName: "Virtus.pro",
-  teamBName: "Movistar Riders"
-};
+// const data = {
+//   eventName: "Mdl europe season 32 2019",
+//   scheduledAt: "2019-11-07T15:00:00Z",
+//   teamALogo:
+//     "https://cdn.pandascore.co/images/team/image/3288/600px_virtus.pro_2019.png",
+//   teamBLogo: "https://cdn.pandascore.co/images/team/image/125785/7718.png",
+//   teamAName: "Virtus.pro",
+//   teamBName: "Movistar Riders"
+// };
 
 //  function retrieveStorage() { JSON.parse(localStorage.getItem("matchID")),
 //     this.setState({ matchID: "matchID" });
@@ -57,6 +57,21 @@ class MatchDash extends Component {
         userBetB: res.data.userBetB
       })
     })
+    API.livedata(0).then(res => {
+      console.log(res.data)
+      this.setState({
+        teamAName: res.data[0].opponents[0].opponent.name,
+        teamBName: res.data[0].opponents[1].opponent.name,
+        teamALogo: res.data[0].opponents[0].opponent.image_url,
+        teamBLogo: res.data[0].opponents[1].opponent.image_url,
+        gameNumber: res.data[0].number_of_games,
+        matchName: res.data[0].name,
+        scoreA: res.data[0].results[0].score,
+        scoreB: res.data[0].results[1].score,
+        prizePool: res.data[0].tournament.prizepool
+      });
+  }
+  );
 
   }
 
@@ -67,10 +82,10 @@ class MatchDash extends Component {
           <div>
             <Jumbotron fluid>
               <Container fluid>
-                <h1 className="display-3">{data.eventName}</h1>
+      <h1 className="display-3">{this.state.matchName}</h1>
                 <p className="lead">
                   <strong>
-                    {data.teamAName} | VS | {data.teamBName}
+                    {this.state.teamAName} | VS | {this.state.teamBName}
                   </strong>
                 </p>
               </Container>

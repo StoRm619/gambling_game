@@ -98,7 +98,7 @@ class ChosenStream extends Component {
                 >
                   <label className="teamADetails">
                     <img
-                      class="teamABetLogo"
+                      className="teamABetLogo"
                       src={this.state.teamALogo}
                       alt="teamALogo"
                     ></img>
@@ -108,7 +108,7 @@ class ChosenStream extends Component {
 
                   <label className="teamBDetails">
                     <img
-                      class="teamABetLogo"
+                      className="teamABetLogo"
                       src={this.state.teamBLogo}
                       alt="teamALogo"
                     ></img>

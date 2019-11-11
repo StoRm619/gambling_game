@@ -39,7 +39,7 @@ ReactDOM.render(
       <Link to="https://github.com/StoRm619/gambling_game">
         | Github Repo 
       </Link>
-      <Link> | Credit to David Libeau for the HACKED font for our Logo |</Link>
+      <Link to="#"> | Credit to David Libeau for the HACKED font for our Logo |</Link>
     </footer>
   </Router>,
   document.getElementById("root")
