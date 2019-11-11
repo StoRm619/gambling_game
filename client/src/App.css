@@ -41,7 +41,7 @@ tr {
   line-height: .9;
 }
 tr:hover {
-  opacity: 45%;
+  opacity: .8;
 }
 #matchNameCol {
   font-family: "bigNoodleOb";
