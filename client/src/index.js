@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 
 import registerServiceWorker from './registerServiceWorker';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Link } from 'react-router-dom';
 import axios from "axios";
 import withAuth from "./components/withAuth";
 
@@ -35,6 +35,12 @@ ReactDOM.render(
       <Route exact path="/matchesBoard" component={withAuth(MatchesBoard)} />
       <Route exact path="/matchDash" component={MatchDash} />
     </div>
+    <footer className="sticky-bottom">
+      <Link to="https://github.com/StoRm619/gambling_game">
+        | Github Repo 
+      </Link>
+      <Link> | Credit to David Libeau for the HACKED font for our Logo |</Link>
+    </footer>
   </Router>,
   document.getElementById("root")
 );
