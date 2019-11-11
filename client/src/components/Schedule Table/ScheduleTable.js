@@ -20,7 +20,7 @@ class ScheduleTable extends Component {
   }
   render() {
     return (
-      <div className="col-sm-12 col-md-5 eventSchedule">
+      <div className="eventSchedule">
         <div className="eventScheduleHeader">Upcoming matches: </div>
         <table className="table eventScheduleTable table-dark">
           <thead>

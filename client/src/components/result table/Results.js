@@ -20,7 +20,8 @@ class Results extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="results">
+                <div className="resultsHeader">Recent results: </div>
                 <table className="table table-dark resultsTable">
                     <thead>
                         <tr>

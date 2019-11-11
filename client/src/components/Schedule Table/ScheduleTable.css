@@ -30,12 +30,17 @@
     border-bottom-right-radius: 8px;
     background-color: rgb(3, 3, 36);
     font-family: 'coderoman';
-  
   }
   @media only screen and (min-width: 768px) {
     .eventSchedule {
       position: absolute;
       top: 364px;
-      right: 25px;
+      right: 2%;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .eventSchedule {
+      top: 364px;
+      width: 42%;
     }
   }

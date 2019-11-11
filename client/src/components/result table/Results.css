@@ -1,7 +1,48 @@
+.results {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 0;
+}
 .resultsTable {
     border-color: #46474da8;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     background-color: rgb(3, 3, 36);
     font-family: 'coderoman';
+  }
+  .resultsHeader {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    background-color: rgb(211, 144, 20);
+    color: black;
+    font-weight: bold;
+    font-family: PS;
+    border-color: #46474da8;
+  }
+  @media only screen and (min-width: 595px) {
+    .results {
+      width: 90%;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .results {
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .results {
+
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .results {
+      position: absolute;
+      width: 42%;
+      top: 980px;
+      right: 2%;
+    
+    }
   }
