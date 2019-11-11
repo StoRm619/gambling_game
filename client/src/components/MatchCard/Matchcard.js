@@ -26,7 +26,7 @@ function Matchcard (props){
                       Origin Tournament
                     </CardTitle>
                     <CardText>
-                      {props.eventName}
+                      {props.eventName || 'TBD'}
                       <br />
 
                       <small className="scheduledText">
@@ -37,18 +37,14 @@ function Matchcard (props){
                   <img
                     className="teamALogo"
                     src={
-                      props.teamALogo
-                        ? props.teamALogo
-                        : "https://img.icons8.com/nolan/64/000000/help--v2.png"
+                      props.teamALogo || "https://img.icons8.com/nolan/64/000000/help--v2.png"
                     }
                     alt="unknown"
                   />
                   <img
                     className="teamBLogo"
                     src={
-                      props.teamBLogo
-                        ? props.teamBLogo
-                        : "https://img.icons8.com/nolan/64/000000/help--v2.png"
+                      props.teamBLogo || "https://img.icons8.com/nolan/64/000000/help--v2.png"
                     }
                     alt="unkown"
                   />
