@@ -21,19 +21,21 @@ function Carousel() {
                             </iframe>
                         </div>
                         <div className="col-sm-6 carouselInfo">
-                            <table className="table table-dark carouselInfoTable">
-                                <tbody>
-                                    <tr>
-                                        <td>Event name</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A x B</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2 x 1</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <table className="table table-dark carouselInfoTable">
+                  <tbody>
+                    <tr>
+                      <td>
+                        Upper Bracket Quarterfinal 2: Movistar Riders vs HAVU
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>$2500 United States Dollar</td>
+                    </tr>
+                    <tr>
+                      <td>CS:GO</td>
+                    </tr>
+                  </tbody>
+                </table>
                         </div>
                     </div>
                 </div>
@@ -50,19 +52,21 @@ function Carousel() {
                             </iframe>
                         </div>
                         <div className="col-sm-6 carouselInfo">
-                            <table className="table table-dark carouselInfoTable">
-                                <tbody>
-                                    <tr>
-                                        <td>Event name</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A x B</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2 x 1</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <table className="table table-dark carouselInfoTable">
+                  <tbody>
+                    <tr>
+                      <td>
+                        Upper Bracket Quarterfinal 2: Movistar Riders vs HAVU
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>$2500 United States Dollar</td>
+                    </tr>
+                    <tr>
+                      <td>CS:GO</td>
+                    </tr>
+                  </tbody>
+                </table>
                         </div>
                     </div>
                 </div>
@@ -79,25 +83,26 @@ function Carousel() {
                             </iframe>
                         </div>
                         <div className="col-sm-6 carouselInfo">
-                            <table className="table table-dark carouselInfoTable">
-                                <tbody>
-                                    <tr>
-                                        <td>Event name</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A x B</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2 x 1</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <table className="table table-dark carouselInfoTable">
+                  <tbody>
+                    <tr>
+                      <td>
+                        Upper Bracket Quarterfinal 2: Movistar Riders vs HAVU
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>$2500 United States Dollar</td>
+                    </tr>
+                    <tr>
+                      <td>CS:GO</td>
+                    </tr>
+                  </tbody>
+                </table>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-    )
+          </div>
+    );
 }
 export default Carousel;
