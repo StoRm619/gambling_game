@@ -162,22 +162,36 @@ tr {
 /* Add money page */
 .addMoney {
   color: white;
+  
 }
 .addMoneyPageHeader {
   margin: 0 auto;
   margin-top: 30px;
   padding: 10px;
   font-weight: bold;
-  border: 2px solid white;
   margin-bottom: 15px;
 }
+#addChronosTitle{
+  text-align: center;
+  font-family: PS2;
+  font-size: 1.9em;
+  margin: 30px;
+}
 .addMoneyForm {
-  margin: 0 auto;
+  margin: auto;
   margin-top: 15px;
 }
 .form-check,
 .addMoneySubmit {
   margin-top: 15px;
+}
+.addMoneySubmit {
+  background-image: linear-gradient(to right, #221181, #2c065e);
+  border: solid;
+  border-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #ebebeb;
+  text-shadow: 2px 2px 8px #b4b0b0;
 }
 .form-group {
   margin-bottom: 5px;
@@ -293,18 +307,6 @@ tr {
   bottom: 0;
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#footer-nav {
-  width: 100%;
-  display: flex;
-  list-style-type: none;
-}
-.footer-nav-item {
-  margin-top: 25px;
-  font-family: "PS";
-  font-size: 1em;
-  text-shadow: 2px 2px 2px #666363;
-
 }
 
 @media only screen and (min-width: 595px) {

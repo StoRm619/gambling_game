@@ -61,8 +61,7 @@ class MatchDash extends Component {
   }
 
   render() {
-      // const { data } = this.props.location;
-      // console.log(JSON.stringify(data))
+
       return (
         <div className="matchDash">
           <div>
