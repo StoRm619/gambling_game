@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'PS';
+  src: url(../../utils/GamestationDisplayObl.otf);
+}
+@font-face {
+  font-family: 'coderoman';
+  src: url(../../utils/CodeNewRoman-aOAK.ttf);
+}
+
+.logInHeader{
+  font-family: 'PS';
+
+}
+.username{
+
+}
+.password{
+
+}
+.noAcctMessage{
+
+}

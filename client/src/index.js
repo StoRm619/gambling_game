@@ -17,7 +17,6 @@ import MatchesBoard from './pages/Matches';
 import MatchDash from './pages/Matchboard';
 import Navbar from './components/Navbar';
 
-
 // Here is if we have an id_token in localStorage
 if(localStorage.getItem("id_token")) {
   // then we will attach it to the headers of each request from react application via axios
@@ -25,20 +24,18 @@ if(localStorage.getItem("id_token")) {
 }
 
 ReactDOM.render(
-    <Router>
+  <Router>
     <div>
-    <Navbar />
-            <Route exact path="/" component={App} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/admin" component={admin} />
-            <Route exact path="/addMoney" component={AddMoney} />
-            <Route exact path="/matchesBoard" component={withAuth(MatchesBoard)} />
-            <Route exact path="/matchDash" component={MatchDash} />
-
-
-        </div>
-    </Router>
-    , document.getElementById('root')
+      <Navbar />
+      <Route exact path="/" component={App} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/signup" component={Signup} />
+      <Route exact path="/admin" component={admin} />
+      <Route exact path="/addMoney" component={AddMoney} />
+      <Route exact path="/matchesBoard" component={withAuth(MatchesBoard)} />
+      <Route exact path="/matchDash" component={MatchDash} />
+    </div>
+  </Router>,
+  document.getElementById("root")
 );
 registerServiceWorker();

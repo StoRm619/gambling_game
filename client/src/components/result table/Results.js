@@ -20,25 +20,26 @@ class Results extends Component {
     }
     render() {
         return (
-            <div className="results">
-                <div className="resultsHeader">Recent results: </div>
-                <table className="table table-dark resultsTable">
-                    <thead>
-                        <tr>
-                            <th scope="col">Result</th>
-                            <th scope="col">Net Chronos</th>
-                            <th scope="col">Matchup</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{this.state.currentResult || "No recent bets!"}</td>
-                            <td>{this.state.currentBet || ""}</td>
-                            <td>{this.state.currentMatchup || ""}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <div className="results">
+            <div className="resultsHeader">Recent Bets </div>
+
+            <table className="table table-dark resultsTable">
+              <thead>
+                <tr>
+                  <th scope="col">Result</th>
+                  <th scope="col">Net Chronos</th>
+                  <th scope="col">Matchup</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{this.state.currentResult || "No recent bets!"}</td>
+                  <td>{this.state.currentBet || ""}</td>
+                  <td>{this.state.currentMatchup || ""}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         );
     }
 

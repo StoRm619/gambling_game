@@ -21,6 +21,8 @@ class BetTable extends Component {
     render() {
         return (
           <div className="bets">
+        <div className="resultsStyle">
+          
             <div className="betHeader">Upcoming matches: </div>
             <table className="table betTable table-dark">
               <thead>
@@ -47,6 +49,7 @@ class BetTable extends Component {
             ))}
               </tbody>
             </table>
+            </div>
           </div>
         );
     }

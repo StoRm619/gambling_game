@@ -27,7 +27,7 @@ class App extends Component {
 
         <div className="row carouselRow">
           <div className="col-sm-10 col-md-6 carouselHeader">
-            Other ongoing matches:
+            Other Live Matches
           </div>
         </div>
         <div className="row">
@@ -35,14 +35,11 @@ class App extends Component {
         </div>
 
         <div className="row">
-          <ScheduleTable />
-        </div>
-        <div className="row">
-          <Results />
-        </div>
-        <footer>
+            <ScheduleTable />
 
-        </footer>
+            
+            <Results />
+            </div>
       </div>
     );
   }
