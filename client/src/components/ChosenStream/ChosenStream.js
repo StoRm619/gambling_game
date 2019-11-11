@@ -17,7 +17,6 @@ class ChosenStream extends Component {
         currentBet: "",
         currentMatchup: "",
     };
-    z
 
     componentDidMount() {
         API.livedata().then(res => {
@@ -90,21 +89,30 @@ class ChosenStream extends Component {
             ></iframe>
             <div className="streamDetails">
               <div className="detailBetContainer">
-                <div className="currentBal">
-                  <p>Chronos balance:</p>
-                  <p>${this.state.chronos ? this.state.chronos : "00.00"}</p>
+                <div>
+                  <h6>{this.state.eventName}</h6>
                 </div>
-                <h6>Event Name</h6>
                 <form
                   onSubmit={this.handleFormSubmit}
-                  className="addMoneyForm col-sm-11 col-md-5"
+                  className="addMoneyForm col-sm-11 col-md-10"
                 >
-                  <label>
+                  <label className="teamADetails">
+                    <img
+                      class="teamABetLogo"
+                      src={this.state.teamALogo}
+                      alt="teamALogo"
+                    ></img>
                     {this.state.teamAName ? this.state.teamAName : "TBD"}
                   </label>
                   <input type="radio" name="chooseTeam" value="TeamA" />
-                  <br />
-                  <label>
+
+                  <label className="teamBDetails">
+                    <img
+                      class="teamABetLogo"
+                      src={this.state.teamBLogo}
+                      alt="teamALogo"
+                    ></img>
+
                     {this.state.teamBName ? this.state.teamBName : "TBD"}
                   </label>
                   <input type="radio" name="chooseTeam" value="TeamB" />
@@ -113,30 +121,31 @@ class ChosenStream extends Component {
                     <input
                       type="text"
                       value={this.state.value}
-                      className="form-control"
+                      className="form-control betAmountInput"
                       id="betMoney"
                       placeholder="Amount to bet"
                       onChange={this.handleInputChange}
                     />
                   </div>
                   <div className="form-group row">
-                    <div className="col-sm-12">
+                    <div>
                       <div className="row">
-                        <button
-                          type="submit"
-                          className="btn btn-primary placeBetMoney"
-                        >
-                          Bet
+                        <button type="submit" className="btn placeBetMoney">
+                          BET
                         </button>
                       </div>
                     </div>
                   </div>
+                  <p className="chronosBal">
+                    Chronos balance: $
+                    {this.state.chronos ? this.state.chronos : "00.00"}
+                  </p>
                 </form>
               </div>
             </div>
           </div>
         );
-    }
+                }
 }
 
 export default withAuth(ChosenStream);

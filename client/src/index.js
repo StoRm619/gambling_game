@@ -16,7 +16,7 @@ import Signup from './pages/Signup';
 import MatchesBoard from './pages/Matches';
 import MatchDash from './pages/Matchboard';
 import Navbar from './components/Navbar';
-
+import Footer from './components/Footer';
 
 // Here is if we have an id_token in localStorage
 if(localStorage.getItem("id_token")) {
@@ -36,7 +36,6 @@ ReactDOM.render(
       <Route exact path="/matchesBoard" component={withAuth(MatchesBoard)} />
       <Route exact path="/matchDash" component={MatchDash} />
     </div>
-    <footer></footer>
   </Router>,
   document.getElementById("root")
 );

@@ -40,7 +40,7 @@ class Signup extends Component {
         <div className="row">
           <form
             onSubmit={this.handleFormSubmit}
-            className="col-sm-10 col-md-6 signUpForm"
+            className="col-sm-10 col-md-10 signUpForm"
           >
             <div className="form-group row">
               <label htmlFor="username" className="formLabel">

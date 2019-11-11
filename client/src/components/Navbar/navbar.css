@@ -13,8 +13,14 @@
   padding-right: 50px;
 }
 .underline:hover{
-  border: solid;
+  border-bottom: solid;
+  border-top: solid;
   border-color: #fff;
+}
+.underline:active{
+  border-bottom: solid;
+  border-top: solid;
+  border-color: rgb(44, 4, 71);
 }
 #navColor{
     background: #000000;

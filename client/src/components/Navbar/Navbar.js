@@ -42,7 +42,7 @@ class Navbar extends Component {
 
     render() {
         return (
-          <nav className="navbar navbar-expand-lg navbar-dark" id="navColor">
+          <nav className="navbar sticky-top navbar-expand-lg navbar-dark" id="navColor">
             <div className="container" id="nav-container">
               <Link className="navbar-brand" to="/">
                 <img

@@ -34,7 +34,7 @@ class MatchesBoard extends Component {
                     <Jumbotron fluid>
                         <Container fluid>
                             <h1 className="display-3">Scheduled Matches</h1>
-                            <p className="lead"><strong>This is where all of the matches are going to show up, bet on or not.</strong></p>
+                            <p className="lead"><strong>Browse the Weekly Tournament Schedules Below</strong></p>
                         </Container>
                     </Jumbotron>
                 </div>

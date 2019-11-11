@@ -41,7 +41,7 @@ class Login extends Component {
           <h1 className="logInHeader">Login</h1>
         </div>
         <div className="row">
-          <form onSubmit={this.handleFormSubmit} className="col-sm-10  col-md-6 logInForm">
+          <form onSubmit={this.handleFormSubmit} className="col-sm-10  col-md-12 logInForm">
             <div className="form-group row">
               <label htmlFor="username" className="formLabel username">Username:</label>
               <input className="form-control"

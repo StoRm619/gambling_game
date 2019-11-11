@@ -18,14 +18,17 @@
     border-color: #00000083;
 
 }
+#chat-label{
+    color: #fff;
+}
 #paperStyle{
-    background-color: white;
+    background-image: radial-gradient( #1e1d1f , #1a1919, #000000);
     margin: 0 auto;
-    color: black;
+    color: rgb(255, 255, 255);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 257px;
     border: solid;
-    border-color: #7a747483;
+    border-color: #00000083;
     opacity: 0.8;
     overflow-y: auto;
 }

@@ -1,71 +1,115 @@
 @font-face {
-  font-family: 'bigNoodle';
+  font-family: "bigNoodle";
   src: url(../../utils/Bignoodletitling-8ojz.ttf);
 }
-
-#betAmountSelect{
-    width: 200px;
-    
+@font-face {
+  font-family: "PS";
+  src: url(../../utils/GamestationDisplayObl.otf);
 }
-h6{
+@font-face {
+  font-family: "PS2";
+  src: url(../../utils/GamestationTextOblOutline.otf);
+}
+
+.detailBetContainer {
+  position: relative;
+  padding: 20px 10px 20px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 4px;
+  color: #ebebeb;
+  background-image: url("https://cdn.shopify.com/s/files/1/0070/6661/5861/files/Featured_product_backgroud_image_1800x.jpg?v=1552502823");
+  background-position: left bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:  790px 460px;
+  border-radius: 4px;
+  margin-bottom: 50px;
+}
+.teamADetails {
+  padding: 10px;
+  position: relative;
+  font-size: 1.3em;
+}
+.teamBDetails {
+  padding: 10px;
+  position: relative;
+  font-size: 1.3em;
+}
+.teamABetLogo {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  margin-left: 80px;
+}
+#betAmountSelect {
+  width: 200px;
+}
+h6 {
   text-align: center;
-  font-family: 'bigNoodle';
+  font-family: "PS2";
   font-size: 2em;
 
   padding: 0;
   margin: 0;
+}
+.betAmountInput {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.placeBetMoney {
+  background-image: linear-gradient(to right, #221181, #2c065e);
+  border: solid;
+  border-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #ebebeb;
+  text-shadow: 2px 2px 8px #b4b0b0;
+  margin-top: 8px;
+  font-size: 1.5em;
+  font-family: "PS";
+  letter-spacing: 1px;
+  margin: auto;
 
 }
-.submit{
-background-color: rgb(211, 144, 20);
-color: black;
-
+.addMoneyForm {
+  margin: auto;
+}
+.submit {
+  background-color: rgb(211, 144, 20);
+  color: black;
 }
 .chosenTwitchPlayer {
-    margin: 0 auto;
-    margin-top: 15px;
+  margin: 0 auto;
+  margin-top: 15px;
 }
-.detailBetContainer{
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 4px;
-    background-color: rgb(3, 3, 36);
-    color: #ebebeb;
-    border: solid;
-    border-color: #46474da8;
-    background-image: url("https://eu.lolesports.com/darkroom/1275/d1a745dfa181420f4f70ac624407fbfd:87a5078cdabfadf440f4c9efc6f7b43f");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-content: center;
+.chronosBal {
+  position: absolute;
+  top: 111px;
+  right: 32px;
 }
 @media only screen and (min-width: 595px) {
-    .chosenTwitchPlayer{
-                width: 100%;
-                height: 350px;
-            }
+  .chosenTwitchPlayer {
+    width: 100%;
+    height: 350px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-    .chosenTwitchPlayer{
-                width: 96%;
-                height: 400px;
-            }
+  .chosenTwitchPlayer {
+    width: 96%;
+    height: 400px;
+  }
 }
 @media only screen and (min-width: 1024px) {
-    .chosenTwitchPlayer{
-                width: 50%;
-                height: 400px; 
-                margin: 0;   
-                margin-left: 2%;
-                margin-top: 15px; 
-            }
+  .chosenTwitchPlayer {
+    width: 50%;
+    height: 400px;
+    margin: 0;
+    margin-left: 2%;
+    margin-top: 15px;
+  }
 }
 @media only screen and (min-width: 1200px) {
-            .chosenTwitchPlayer{
-                width: 52%;
-                height: 450px;
-            }
-
+  .chosenTwitchPlayer {
+    width: 52%;
+    height: 450px;
+  }
 }

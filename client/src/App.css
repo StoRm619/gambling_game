@@ -1,75 +1,67 @@
 @font-face {
-  font-family: 'PS';
+  font-family: "PS";
   src: url(./utils/GamestationDisplayObl.otf);
 }
 @font-face {
-  font-family: 'coderoman';
+  font-family: "coderoman";
   src: url(./utils/CodeNewRoman-aOAK.ttf);
 }
 @font-face {
-  font-family: 'bigNoodle';
+  font-family: "bigNoodle";
   src: url(./utils/CodeNewRomanItalic-6Xpo.ttf);
 }
 @font-face {
-  font-family: 'bigNoodleOb';
+  font-family: "bigNoodleOb";
   src: url(./utils/BignoodletitlingOblique-BxY5.ttf);
 }
-body{
+.container {
+  width: 70%;
+}
+body {
   background-color: black;
   color: #ebebeb;
-  font-family: 'coderoman';
+  font-family: "coderoman";
   background-image: url("./utils/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-th{
+th {
   padding: 0;
-  font-family: 'bigNoodle';
+  font-family: "bigNoodle";
   font-size: 1.5em;
   letter-spacing: 2px;
   font-weight: lighter;
   vertical-align: middle;
-
-
-  
 }
-tr{
+tr {
   vertical-align: middle;
   text-align: left;
   line-height: 1;
 }
-footer{
-  background-color: #000000;
-    height: 50px;
-    margin-top: 40px;
-    position: fixed;
-  bottom: 0;
-}
-#matchNameCol{
-  font-family: 'bigNoodleOb';
+#matchNameCol {
+  font-family: "bigNoodleOb";
   font-size: 1.3em;
-
 }
-#vs{
-    border-radius: 60%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#vs {
+  border-radius: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#vsMain{
-    margin: 5px;
-    border-radius: 60%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#vsMain {
+  margin: 5px;
+  border-radius: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#matchName{
-  font-family: 'PS';
+#matchName {
+  font-family: "PS";
   font-size: 1.2em;
 }
-#prizePool{
-  font-family: 'coderoman';
+#prizePool {
+  font-family: "coderoman";
 }
-#middleInfo{
-  width:400px;
+#middleInfo {
+  width: 400px;
 }
 .row {
   margin: 0;
@@ -79,24 +71,26 @@ footer{
 }
 
 .matches {
-      background-image: url("./utils/simpleTexture.jpg");
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-    }
+  background-image: url("./utils/simpleTexture.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .App {
-      background-image: url("./utils/simpleTexture.jpg");
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      font-family: 'coderoman';
-    }
+  background-image: url("./utils/simpleTexture.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "coderoman";
+}
 .table {
   padding: 0;
   margin-bottom: 0;
+}
+#chat {
+  color: #fff;
 }
 .App {
   text-align: center;
@@ -110,58 +104,52 @@ footer{
   color: white;
 }
 /* Sign up and log in pages */
-.signUpHeader,.logInHeader {
-  font-family: 'PS';
+.signUpHeader,
+.logInHeader {
+  font-family: "PS";
   margin: 0 auto;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 15px;
   color: white;
 }
-.login{
+.login {
   margin-top: 100px;
-  background-image: radial-gradient( #101011 , #1a1919, #000000);
+  background-image: radial-gradient(#101011, #1a1919, #000000);
   border-radius: 4px;
   padding-bottom: 60px;
   outline: 1px solid rgb(0, 0, 0);
   outline-offset: -10px;
 }
-.signUpPage{
+.signUpPage {
   margin-top: 100px;
-  background-image: radial-gradient( #101011 , #1a1919, #000000);
+  background-image: radial-gradient(#101011, #1a1919, #000000);
   border-radius: 4px;
   padding-bottom: 60px;
   outline: 1px solid rgb(0, 0, 0);
   outline-offset: -10px;
 }
-.username{
-
-}
-.password{
-
-}
-.signUpSubmit{
-  background-image: linear-gradient(to right, #221181 , #2c065e);
+.signUpSubmit {
+  background-image: linear-gradient(to right, #221181, #2c065e);
   border: solid;
   border-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #ebebeb;
   text-shadow: 2px 2px 8px #b4b0b0;
-
 }
-.logInSubmit{
-    background-image: linear-gradient(to right, #221181 , #2c065e);
+.logInSubmit {
+  background-image: linear-gradient(to right, #221181, #2c065e);
   border: solid;
   border-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #ebebeb;
   text-shadow: 2px 2px 8px #b4b0b0;
-
 }
-#noAcctMessage{
-  font-family: 'PS';
+#noAcctMessage {
+  font-family: "PS";
 }
-.signUpForm,.logInForm {
+.signUpForm,
+.logInForm {
   margin: 0 auto;
   padding: 0;
 }
@@ -187,7 +175,8 @@ footer{
   margin: 0 auto;
   margin-top: 15px;
 }
-.form-check, .addMoneySubmit {
+.form-check,
+.addMoneySubmit {
   margin-top: 15px;
 }
 .form-group {
@@ -202,7 +191,6 @@ footer{
   margin-top: 30px;
   height: 300px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .mainMatchInfoRow {
@@ -215,18 +203,13 @@ footer{
 }
 .mainGameInfo {
   padding-bottom: 10px;
-  padding-top:10px;
-  background-color: #19133583;
-  background-image: linear-gradient(to right, #991313b9 , #0c0363ab);
-  background-attachment: local;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding-top: 10px;
+  background-color: #000000;
+  background-image: radial-gradient(#2e0101, #00012ec4, #000000, #000000);
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: rgb(211, 144, 20);
-
 }
 
 .teamInfo {
@@ -252,38 +235,39 @@ footer{
   margin: 0 auto;
   margin-top: 15px;
   font-weight: bold;
-  font-family: 'PS';
+  font-family: "PS";
   text-shadow: 2px 2px 8px #000000;
   width: 140px;
 }
 .mainGameBet {
   margin-top: 10px;
 }
-#mainBetBtn{
-  padding: 4px 30px 4px 30px;
-  border-radius: 3px;
-  color: rgb(211, 144, 20);
-  text-shadow: 2px 2px 8px #ec0020;
+#mainBetBtn {
+  background-image: linear-gradient(to right, #221181, #2c065e);
+  border: solid;
+  border-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  font-size: 1.2em;
-  font-weight: bolder;
-  background-color: #000;
-  border: none;
-  
+  color: #ebebeb;
+  text-shadow: 2px 2px 8px #b4b0b0;
+  margin-top: 8px;
+  font-size: 1.5em;
+  font-family: "PS";
+  padding-top: 5px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
 }
 /* Home page - carousel */
 .carouselRow {
   margin-top: 30px;
-
 }
-.display-3{
-    text-shadow: 2px 2px 8px #000000;
+.display-3 {
+  text-shadow: 2px 2px 8px #000000;
 }
-.lead{
-    text-shadow: 2px 2px 8px #000000;
+.lead {
+  text-shadow: 2px 2px 8px #000000;
 }
 .carouselHeader {
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   font-family: PS;
   margin: 0 auto;
   text-align: center;
@@ -297,17 +281,39 @@ footer{
   text-shadow: 2px 2px 8px #000000;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+}
+.pagePosition{
+  position: relative
+}
+.footer {
+  background-color: #000000;
+  height: 80px;
+  margin-top: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#footer-nav {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+}
+.footer-nav-item {
+  margin-top: 25px;
+  font-family: "PS";
+  font-size: 1em;
+  text-shadow: 2px 2px 2px #666363;
 
 }
 
 @media only screen and (min-width: 595px) {
-  .matchesBox{
+  .matchesBox {
     width: 100%;
     padding: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   }
-  .matchCard{
+  .matchCard {
     margin: auto;
     width: 100%;
   }
@@ -336,11 +342,11 @@ footer{
   .form-group {
     padding: 0;
   }
-  .matchesBox{
+  .matchesBox {
     margin-left: 20px;
     padding: 10px;
   }
-  .matchCard{
+  .matchCard {
     margin-left: 5px;
     margin-right: 5px;
     width: 90%;
@@ -348,13 +354,12 @@ footer{
   }
 }
 
-
 @media only screen and (min-width: 1024px) {
-  .matchesBox{
+  .matchesBox {
     margin-left: 20px;
     padding: 10px;
   }
-  .matchCard{
+  .matchCard {
     margin-left: 5px;
     margin-right: 5px;
     width: 45%;
@@ -362,12 +367,11 @@ footer{
 }
 
 @media only screen and (min-width: 1200px) {
-  .matchesBox{
+  .matchesBox {
     margin-left: 20px;
     padding: 10px;
-
   }
-.matchCard{
+  .matchCard {
     margin-left: 5px;
     margin-right: 5px;
   }
