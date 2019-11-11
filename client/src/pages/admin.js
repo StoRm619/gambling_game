@@ -70,7 +70,7 @@ class admin extends Component {
                         //calculate how much they won, add to balance, call API to update database
                         res.data[i].username,
                         res.data[i].chronos + parseInt(Math.floor((res.data[i].userBetA / this.state.poolA) * this.state.poolTotal)),
-                        res.data[i].chronos + parseInt(Math.floor((res.data[i].userBetA / this.state.poolA) * this.state.poolTotal)),
+                        parseInt(Math.floor((res.data[i].userBetA / this.state.poolA) * this.state.poolTotal)),
                         this.state.currentMatchup,
                         this.state.currentResult,
                     )
@@ -116,7 +116,7 @@ class admin extends Component {
                     API.payWinners(
                         res.data[i].username,
                         res.data[i].chronos + parseInt(Math.floor((res.data[i].userBetB / this.state.poolB) * this.state.poolTotal)),
-                        res.data[i].chronos + parseInt(Math.floor((res.data[i].userBetB / this.state.poolB) * this.state.poolTotal)),
+                        parseInt(Math.floor((res.data[i].userBetB / this.state.poolB) * this.state.poolTotal)),
                         this.state.currentMatchup,
                         this.state.currentResult,
                     )

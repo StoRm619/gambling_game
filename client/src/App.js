@@ -19,7 +19,7 @@ class App extends Component {
               <h1 className="display-3">GG</h1>
               <p className="lead"><strong>Real Time ESports Stakes with Real People</strong></p>
             </Container>
-          </Jumbotron>
+          </Jumbotron>  
         </div>
         <div className="row">
           <MainMatch />
