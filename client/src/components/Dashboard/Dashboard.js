@@ -21,10 +21,12 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center"
   },
   chatWindow: {
-    width: "70%"
+    width: "70%",
+    marginBottom: "210px"
   },
   chatBox: {
     width: "85%",
+    //marginBottom: "450px"
   },
   button: {
     width: "15%"

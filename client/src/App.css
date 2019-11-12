@@ -162,6 +162,8 @@ tr {
 /* Add money page */
 .addMoney {
   color: white;
+  margin-bottom: 200px;
+
 }
 .addMoneyPageHeader {
   margin: 0 auto;
