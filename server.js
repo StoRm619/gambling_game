@@ -43,13 +43,13 @@ app.post('/api/login', (req, res) => {
 });
 
 app.get('/api/livedata',(req, res) => {
-  axios.get("https://api.pandascore.co/csgo/matches?token=" + process.env.PANDASCORE_TOKEN + "&per_page=10")
+  axios.get("https://api.pandascore.co/csgo/matches/past?token=" + process.env.PANDASCORE_TOKEN + "&per_page=10")
     .then(response => res.json(response.data))
 
 });
 
 app.get('/api/livedata5',(req, res) => {
-  axios.get("https://api.pandascore.co/csgo/matches?token=" + process.env.PANDASCORE_TOKEN + "&per_page=6")
+  axios.get("https://api.pandascore.co/csgo/matches/past?token=" + process.env.PANDASCORE_TOKEN + "&per_page=6")
     .then(response => res.json(response.data))
 
 });

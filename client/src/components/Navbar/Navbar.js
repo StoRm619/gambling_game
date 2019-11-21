@@ -28,50 +28,38 @@ class Navbar extends Component {
         }
         else {
             return (
-                <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="/signup">Signup</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="/login">Login</Link>
-                    </li>
-                </ul>
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link className="nav-link underline" to="/signup">
+                    Signup
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link underline" to="/login">
+                    Login
+                  </Link>
+                </li>
+              </ul>
             );
         }
     };
 
     render() {
         return (
-          <nav className="navbar sticky-top navbar-expand-lg navbar-dark" id="navColor">
-            <div className="container" id="nav-container">
-              <Link className="navbar-brand" to="/">
-                <img
-                  src="https://cybertelds.com/wp-content/uploads/2017/11/cropped-favicon.png"
-                  alt="logo"
-                  width="50"
-                  height="40"
-                  className="logo"
-                ></img>
-                Gambling Game
-              </Link>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav mr-auto"></ul>
-                {this.showNavigation()}
-              </div>
-            </div>
-          </nav>
-        );
+            <nav className="navbar navbar-expand-lg navbar-dark" id="navColor">
+                <div className="container" id="nav-container">
+                    <Link className="navbar-brand" to="/"> Gambling Game</Link>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav mr-auto">
+                        </ul>
+                        {this.showNavigation()}
+                    </div>
+                </div>
+            </nav>
+        )
     }
 }
 

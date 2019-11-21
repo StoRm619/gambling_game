@@ -7,7 +7,7 @@ export const CTX = React.createContext();
 const initState = {
     general: [
         
-            {from: "rafa", msg: "hello"}
+            // {from: "rafa", msg: "hello"}
         
     ],
     username:""

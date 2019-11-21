@@ -80,7 +80,7 @@ class ChosenStream extends Component {
         return (
           <div className="chosenTwitchPlayer">
             <iframe
-              src="https://player.twitch.tv/?channel=summit1g&muted=true&autoplay=false"
+              src="https://player.twitch.tv/?channel=esl_csgo&muted=true&autoplay=true"
               height="100%"
               width="100%"
               frameBorder="0"
