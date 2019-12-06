@@ -1,18 +1,22 @@
 @font-face {
   font-family: "PS";
-  src: url(./utils/GamestationDisplayObl.otf);
+  src: url(./utils/fonts/GamestationDisplayObl.otf);
+}
+@font-face {
+  font-family: "PSoutline";
+  src: url(./utils/fonts/GamestationTextOblOutline.otf);
 }
 @font-face {
   font-family: "coderoman";
-  src: url(./utils/CodeNewRoman-aOAK.ttf);
+  src: url(./utils/fonts/CodeNewRoman-aOAK.ttf);
 }
 @font-face {
   font-family: "bigNoodle";
-  src: url(./utils/CodeNewRomanItalic-6Xpo.ttf);
+  src: url(./utils/fonts/CodeNewRomanItalic-6Xpo.ttf);
 }
 @font-face {
   font-family: "bigNoodleOb";
-  src: url(./utils/BignoodletitlingOblique-BxY5.ttf);
+  src: url(./utils/fonts/BignoodletitlingOblique-BxY5.ttf);
 }
 .container {
   width: 70%;
@@ -21,7 +25,7 @@ body {
   background-color: black;
   color: #ebebeb;
   font-family: "coderoman";
-  background-image: url("./utils/simpleTexture.jpg");
+  background-image: url("./utils/images/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -71,14 +75,14 @@ tr {
 }
 
 .matches {
-  background-image: url("./utils/simpleTexture.jpg");
+  background-image: url("./utils/images/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .App {
-  background-image: url("./utils/simpleTexture.jpg");
+  background-image: url("./utils/images/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -137,6 +141,7 @@ tr {
   color: #ebebeb;
   text-shadow: 2px 2px 8px #b4b0b0;
 }
+
 .logInSubmit {
   background-image: linear-gradient(to right, #221181, #2c065e);
   border: solid;
@@ -274,6 +279,9 @@ tr {
 /* Home page - carousel */
 .display-3 {
   text-shadow: 2px 2px 8px #000000;
+}
+#ggJumbotron{
+  font-family: 'PSoutline';
 }
 .lead {
   text-shadow: 2px 2px 8px #000000;

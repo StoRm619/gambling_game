@@ -1,14 +1,14 @@
 @font-face {
   font-family: "bigNoodle";
-  src: url(../../utils/Bignoodletitling-8ojz.ttf);
+  src: url(../../utils/fonts/Bignoodletitling-8ojz.ttf);
 }
 @font-face {
   font-family: "PS";
-  src: url(../../utils/GamestationDisplayObl.otf);
+  src: url(../../utils/fonts/GamestationDisplayObl.otf);
 }
 @font-face {
   font-family: "PS2";
-  src: url(../../utils/GamestationTextOblOutline.otf);
+  src: url(../../utils/fonts/GamestationTextOblOutline.otf);
 }
 
 .detailBetContainer {

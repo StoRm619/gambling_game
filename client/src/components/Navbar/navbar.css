@@ -1,14 +1,14 @@
 
 @font-face {
   font-family: 'HACKED';
-  src: url(../../utils/HACKED.ttf);
+  src: url(../../utils/fonts/HACKED.ttf);
 }
 @font-face {
   font-family: 'bigNoodle';
-  src: url(../../utils/Bignoodletitling-8ojz.ttf);
+  src: url(../../utils/fonts/Bignoodletitling-8ojz.ttf);
 }
 tr:hover{
-opacity: .8;
+opacity: .6;
 }
 .underline{
 
@@ -17,9 +17,7 @@ opacity: .8;
   border-radius: 50%;
 } 
 .underline:hover{
-  border: none;
-  box-shadow: 4px 0 8px 0 rgba(131, 10, 131, 0.521);
-  text-shadow: 2px 2px 8px #b4b0b0;
+  text-shadow: 5px 1px 5px rgba(131, 10, 131, 0.938);;
 
 }
 .underline:active{

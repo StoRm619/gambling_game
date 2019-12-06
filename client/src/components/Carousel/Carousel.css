@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'PS';
-  src: url(../../utils/GamestationDisplayObl.otf);
+  src: url(../../utils/fonts/GamestationDisplayObl.otf);
 }
 @font-face {
   font-family: 'coderoman';
-  src: url(../../utils/CodeNewRoman-aOAK.ttf);
+  src: url(../../utils/fonts/CodeNewRoman-aOAK.ttf);
 }
 .carousel {
     margin: 0 auto;
@@ -26,7 +26,7 @@
     margin: 0 auto;
     padding: 0;
     height: 175px;
-    background-image: url('../../utils/blue.jpg');
+    background-image: url('../../utils/images/blue.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
