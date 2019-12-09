@@ -17,6 +17,12 @@ import MatchesBoard from './pages/Matches';
 import MatchDash from './pages/Matchboard';
 import Navbar from './components/Navbar';
 
+//Images
+import logo from './utils/icons/logo.png';
+import twitchLogo from "./utils/icons/twitch_logo.png";
+import socketLogo from "./utils/icons/socket_logo.png";
+import pandaLogo from "./utils/icons/pandaScore_logo.png";
+
 // Here is if we have an id_token in localStorage
 if(localStorage.getItem("id_token")) {
   // then we will attach it to the headers of each request from react application via axios
@@ -36,10 +42,25 @@ ReactDOM.render(
       <Route exact path="/matchDash" component={MatchDash} />
     </div>
     <footer className="sticky-bottom">
-      <Link to="https://github.com/StoRm619/gambling_game">
-        | Github Repo 
+      <Link to="#">
+        <img className="footerImg" src={logo} alt=""></img>
       </Link>
-      <Link to="#"> | Credit to David Libeau for the HACKED font for our Logo |</Link>
+      <Link to="https://github.com/StoRm619/gambling_game">
+        <img
+          className="footerImg"
+          src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
+          alt="GG Github Repo"
+        ></img>
+      </Link>
+      <Link to="https://dev.twitch.tv/docs">
+        <img className="footerImg" src={twitchLogo} alt="Twitch API Docs"></img>
+      </Link>
+      <Link to="https://socket.io/docs/">
+        <img className="footerImg" src={socketLogo} alt="Socket.io Docs"></img>
+      </Link>
+      <Link to="https://pandascore.co/">
+        <img className="footerImg" src={pandaLogo} alt="PandaScore Docs"></img>
+      </Link>
     </footer>
   </Router>,
   document.getElementById("root")
