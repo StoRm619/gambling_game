@@ -1,19 +1,24 @@
 @font-face {
   font-family: 'bigNoodle';
-  src: url(../../utils/Bignoodletitling-8ojz.ttf);
+  src: url(../../utils/fonts/Bignoodletitling-8ojz.ttf);
 }
 @font-face {
+  src: url(../../utils/fonts/GamestationDisplayObl.otf);
   font-family: 'PS';
-  src: url(../../utils/GamestationDisplay.otf);
+}
+@font-face {
+  font-family: 'PSoutline';
+  src: url(../../utils/fonts/GamestationTextOblOutline.otf);
 }
 @font-face {
   font-family: 'coderoman';
-  src: url(../../utils/CodeNewRoman-aOAK.ttf);
+  src: url(../../utils/fonts/CodeNewRoman-aOAK.ttf);
 }
 
 .display-3{
-  font-family: 'PS';
   font-size: 4.5em;
+  font-family: 'PS';
+
 }
 .lead{
     font-family: 'bigNoodle';
@@ -33,7 +38,6 @@
 
 }
 .matchesBox{
-  /* background: url("http://hintergrundbild.org/wallpaper/full/c/e/2/31524-downloaden-schlichte-hintergrundbilder-1920x1080.jpg"); */
   padding-top: 20px;
   background-attachment: fixed;
   background-position: center;

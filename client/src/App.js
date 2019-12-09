@@ -16,7 +16,7 @@ class App extends Component {
         <div>
           <Jumbotron fluid>
             <Container fluid>
-              <h1 className="display-3">GG</h1>
+              <h1 className="display-3" id= "ggJumbotron">GG</h1>
               <p className="lead"><strong>Real Time ESports Stakes with Real People</strong></p>
             </Container>
           </Jumbotron>  

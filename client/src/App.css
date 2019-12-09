@@ -1,18 +1,22 @@
 @font-face {
   font-family: "PS";
-  src: url(./utils/GamestationDisplayObl.otf);
+  src: url(./utils/fonts/GamestationDisplayObl.otf);
+}
+@font-face {
+  font-family: "PSoutline";
+  src: url(./utils/fonts/GamestationTextOblOutline.otf);
 }
 @font-face {
   font-family: "coderoman";
-  src: url(./utils/CodeNewRoman-aOAK.ttf);
+  src: url(./utils/fonts/CodeNewRoman-aOAK.ttf);
 }
 @font-face {
   font-family: "bigNoodle";
-  src: url(./utils/CodeNewRomanItalic-6Xpo.ttf);
+  src: url(./utils/fonts/CodeNewRomanItalic-6Xpo.ttf);
 }
 @font-face {
   font-family: "bigNoodleOb";
-  src: url(./utils/BignoodletitlingOblique-BxY5.ttf);
+  src: url(./utils/fonts/BignoodletitlingOblique-BxY5.ttf);
 }
 .container {
   width: 70%;
@@ -21,11 +25,24 @@ body {
   background-color: black;
   color: #ebebeb;
   font-family: "coderoman";
-  background-image: url("./utils/simpleTexture.jpg");
+  background-image: url("./utils/images/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+a:hover{
+  text-shadow: 3px 1px 3px rgb(162, 2, 194);
+  color: #ffffff;
+
+}
+a:active{
+  border-bottom: solid;
+  border-top: solid;
+  border-color: rgb(44, 4, 71);
+  box-shadow: 0 4px 8px 0 rgba(165, 0, 165, 0.2);
+  color: #ebebeb;
+
 }
 th {
   padding: 0;
@@ -71,14 +88,14 @@ tr {
 }
 
 .matches {
-  background-image: url("./utils/simpleTexture.jpg");
+  background-image: url("./utils/images/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .App {
-  background-image: url("./utils/simpleTexture.jpg");
+  background-image: url("./utils/images/simpleTexture.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -137,6 +154,7 @@ tr {
   color: #ebebeb;
   text-shadow: 2px 2px 8px #b4b0b0;
 }
+
 .logInSubmit {
   background-image: linear-gradient(to right, #221181, #2c065e);
   border: solid;
@@ -274,6 +292,9 @@ tr {
 /* Home page - carousel */
 .display-3 {
   text-shadow: 2px 2px 8px #000000;
+}
+#ggJumbotron{
+  font-family: 'PSoutline';
 }
 .lead {
   text-shadow: 2px 2px 8px #000000;
