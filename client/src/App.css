@@ -31,6 +31,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+a:hover{
+  text-shadow: 3px 1px 3px rgb(4, 239, 247);
+  color: #ffffff;
+
+}
+a:active{
+  border-bottom: solid;
+  border-top: solid;
+  border-color: rgb(44, 4, 71);
+  box-shadow: 0 4px 8px 0 rgba(165, 0, 165, 0.2);
+  color: #ebebeb;
+
+}
 th {
   padding: 0;
   font-family: "bigNoodle";
