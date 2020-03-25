@@ -1,4 +1,6 @@
 # Gamling Game - CSGO
+Check out the deployed version: [Heroku App](https://gamblingame.herokuapp.com/)
+Link to the github repo: [GitHub Repo](https://github.com/StoRm619/gambling_game)
 
 The Gambling Game application was developed as a Final Project of UCSDs Full-Stack Coding Bootcamp. As the eSports industry continues to develop, and becomes closer and closer to traditional sports the team recognized an opportunity to get into the eSports betting scene early. This site allows users to create unique accounts, watch live eSports tournaments, interact with the community through a real-time chat system, and place bets on their favorite teams. 
 
@@ -18,5 +20,3 @@ How to play!:
     - Once the match is over you can view recent results on your homepage
 ![BetScreenshot](/client/src/utils/images/PlaceBet.png)
 
-Check out the deployed version: [Heroku App](https://gamblingame.herokuapp.com/)
-Link to the github repo: [GitHub Repo](https://github.com/StoRm619/gambling_game)
